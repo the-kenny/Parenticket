@@ -39,9 +39,36 @@ jedes der drei Gruppenmitglieder ein Pensum von 270 Arbeitsstunden
 eingeplant.
 
 ## Endergebnisse des Projekts
+
+Ziel ist ein funktionsfaehiger Prototyp eines Systems zur Verwaltung
+von Aufgaben in einem (Software-)Projekt. In den einzelnen Phasen
+(Planung, Definition, Entwurf, Realisierung) des Entwicklungsprozesses
+sollen dabei folgende Artefakte entstehen:
+
+* Lastenheft
+* Projektplan
+* Glossar
+* Szenarios
+* Use Cases
+* Class-Responsibility-Collaboration Karten
+* Domain-Object-Model
+* Benutzerhandbuck
+* Pflichtenheft
+* Oberflaechenprototyp
+* Nichtfunktionale Anfworderungen
+* Analyse-Objektmodell
+* Spezifikation der Systemkomponenten
+* Architekturplan
+* Systemdekomposition
+
 ## Evolution des SPMPs
-##. Referenziertes Material
-##. Definitionen und Akronyme
+
+Im Voraus geplante Projekte treffen waehrend der Realisierung oft auf
+Probleme, die Aenderungen am SPMP noetig machen. Ist dies der Fall,
+werden die Aenderungen im Revision Sheet dokumentiert. 
+
+## Referenziertes Material
+## Definitionen und Akronyme
 # Projektorganisation
 # Prozessmodell
 ## Verantwortlichkeiten
@@ -53,7 +80,7 @@ eingeplant.
 * Phase 3 (M3): Roland Meneghetti
 * Phase 4 (M4): Sandra Classen
 
-
+## Rollenverteilung
 * Entwickler: Sandra Classen, Moritz Ulrich, Roland Meneghetti
 * Dokumentation: Sandra Classen, Moritz Ulrich, Roland Meneghetti
 * Kunde: Wir selbst ;-)
@@ -78,3 +105,4 @@ eingeplant.
 
 - Web-Oberflaeche: Benutzerschnittstelle, auf die man mit Hilfe eines
   Web-Browsers zugreift.
+
