@@ -14,6 +14,7 @@
 ## Revision Sheet
 
 * **16.04.2014** Initiale Version
+* **28.04.2014** Ergaenzung
 
 # Inhaltsverzeichnis
 # Vorwort
@@ -69,18 +70,53 @@ werden die Aenderungen im Revision Sheet dokumentiert.
 
 ## Referenziertes Material
 ## Definitionen und Akronyme
+
 # Projektorganisation
-# Prozessmodell
+## Prozessmodell
+
+Es folgt eine Auflistung der in der jeweiligen Phase produzierten
+Artefakte:
+
+### Phase 1
+
+* Lastenheft
+* Projektplan
+* Glossar
+* Szenarios
+* Use Cases
+* Class-Responsibility-Collaboration Karten
+* Domain-Object-Model
+
+### Phase 2
+
+* Glossar (verfeinert)
+* Benutzerhandbuck
+* Pflichtenheft
+* Oberflaechenprototyp
+* Nichtfunktionale Anfworderungen
+* Analyse-Objektmodell
+
+### Phase 3
+
+* Pflichtenheft (verfeinert)
+* Spezifikation der Systemkomponenten
+* Architekturplan
+* Systemdekomposition
+
+### Phase 4
+
+* Funktionaler Prototyp
+
 ## Verantwortlichkeiten
 
-## Projektmanager
+### Projektmanager
 
 * Phase 1 (M1): Sandra Classen
 * Phase 2 (M2): Moritz Ulrich
 * Phase 3 (M3): Roland Meneghetti
 * Phase 4 (M4): Sandra Classen
 
-## Rollenverteilung
+### Rollenverteilung
 * Entwickler: Sandra Classen, Moritz Ulrich, Roland Meneghetti
 * Dokumentation: Sandra Classen, Moritz Ulrich, Roland Meneghetti
 * Kunde: Wir selbst ;-)
