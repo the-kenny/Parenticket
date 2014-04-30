@@ -131,14 +131,3 @@ Artefakte:
 ## Erforderliche Ressourcen
 ## Budget- und Ressourcenzuweisung
 ## Zeitplan
-# Glossar
-
-- Tool: Werkzeug, hier Computerprogramm zur Erleichterung einer
-  Aufgabe
-
-- Ticket: Elektronische Form eines Anliegens, bsp. Stoerung,
-  Aenderungswunsch oder andere Aufgaben
-
-- Web-Oberflaeche: Benutzerschnittstelle, auf die man mit Hilfe eines
-  Web-Browsers zugreift.
-
