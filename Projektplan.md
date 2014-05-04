@@ -19,8 +19,8 @@
 # Inhaltsverzeichnis
 # Vorwort
 
-# Einleitung
-## Projektübersicht
+# 1. Einleitung
+## 1.1 Projektübersicht
 
 Anwendungsentwicklung in einem Team erfordert ein hohes Mass an
 Koordination und Planung. Ein unverzichtbares Tool dafür ist die
@@ -39,7 +39,7 @@ vollständig umgesetzt werden. Innerhalb dieser Zeitspanne ist für
 jedes der drei Gruppenmitglieder ein Pensum von 270 Arbeitsstunden
 eingeplant.
 
-## Endergebnisse des Projekts
+## 1.2 Endergebnisse des Projekts
 
 Ziel ist ein funktionsfaehiger Prototyp eines Systems zur Verwaltung
 von Aufgaben in einem (Software-)Projekt. In den einzelnen Phasen
@@ -62,17 +62,17 @@ sollen dabei folgende Artefakte entstehen:
 * Architekturplan
 * Systemdekomposition
 
-## Evolution des SPMPs
+## 1.3 Evolution des SPMPs
 
 Im Voraus geplante Projekte treffen waehrend der Realisierung oft auf
 Probleme, die Aenderungen am SPMP noetig machen. Ist dies der Fall,
 werden die Aenderungen im Revision Sheet dokumentiert. 
 
-## Referenziertes Material
-## Definitionen und Akronyme
+## 1.4 Referenziertes Material
+## 1.5 Definitionen und Akronyme
 
-# Projektorganisation
-## Prozessmodell
+# 2. Projektorganisation
+## 2.1 Prozessmodell
 
 Es folgt eine Auflistung der in der jeweiligen Phase produzierten
 Artefakte:
@@ -107,7 +107,7 @@ Artefakte:
 
 * Funktionaler Prototyp
 
-## Verantwortlichkeiten
+## 2.2 Verantwortlichkeiten
 
 ### Projektmanager
 
@@ -121,13 +121,14 @@ Artefakte:
 * Dokumentation: Sandra Classen, Moritz Ulrich, Roland Meneghetti
 * Kunde: Wir selbst ;-)
 
-# Technischer Prozess
-## Methoden, Werkzeuge und Techniken
-## Softwaredokumentation
-## Hilfsfunktionen für das Projekt
-# Arbeitselemente, Zeitplan, Budget
-## Arbeitspakete
-## Abhängigkeiten
-## Erforderliche Ressourcen
-## Budget- und Ressourcenzuweisung
-## Zeitplan
+# 3. Technischer Prozess
+## 3.1 Methoden, Werkzeuge und Techniken
+## 3.2 Softwaredokumentation
+## 3.3 Hilfsfunktionen für das Projekt
+
+# 4. Arbeitselemente, Zeitplan, Budget
+## 4.1 Arbeitspakete
+## 4.2 Abhängigkeiten
+## 4.3 Erforderliche Ressourcen
+## 4.4 Budget- und Ressourcenzuweisung
+## 4.5 Zeitplan
