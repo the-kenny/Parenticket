@@ -1,21 +1,36 @@
 # Lastenheft
 ### zum Projekt "Parenticket"
 
+**Autor**: Sandra Classen, Moritz Ulrich
+
+**Betreuer**: Andreas Becker, Farbian Noth
+
+**Modul**: BA-INF 051
+
+**Version**: 0.2 (Stand 04.05.2014)
+
 # 1. Zielbestimmung
 
-  Die Anwendung "Parenticket" soll es dem Nutzer ermoeglichen, die
-  Aufgabenverteilung in kleineren (Software-)Projekten zu verwalten.
-  Dabei soll der Nutzer Projekte, und in diesen Tickets (Aufgaben)
-  anlegen und bearbeiten (Loeschen, Editieren) koennen. Fuer jedes
-  Projekt sollen die Tickets aufgelistet werden koennen.
+  Das Ticketsystem soll dazu benutzt werden können, um innerhalb eines
+  Projektes einen Überblick über anstehenden Aufgaben zu erhalten. Es
+  können Tickets, die eine offene Aufgabe repräsentieren, angelegt
+  werden.. Ein Ticket besteht aus Titel und optionaler Beschreibung,
+  Deadline, Priorität und Liste von Tags.
 
-  Tickets sollen einen Titel sowie eine detailliertere Beschreibung,
-  sowie optional einen oder mehrere Tags (Beispiele: "Front-End",
-  "Wichtig") besitzen. Tickets mit einem bestimmten Tag sollen
-  aufgelistet werden koennen.
+  Diese sind optisch in verschiedene Kategorien („Offene Aufgaben“,
+  „In Arbeit“ und „Bearbeitet“, etc.). Die Tickets können vom User
+  diesen Kategorien verschoben werden, um einen Arbeitsablauf
+  detailliert zu planen.
+
+  Innerhalb der Kategorien sind die einzelnen Tickets nach einer ihnen
+  zugewiesenen Priorität sortiert, damit zusätzlich zu den Kategorien
+  ein weiterer Überblick über die einzelnen Aufgaben gegeben ist.
+  Zusätzlich kann jedem Ticket ein oder mehrere Tags zugeordnet werden, um
+  diese weiter zu kategorisieren. Es koennen alle Tickets zu einem Tag
+  aufgelistet werden.
 
 # 2. Produkteinsatz
- 
+
   Die Software soll als Web-Anwendung realisiert werden. Dadurch kann
   sie sowohl auf dem eigenen Rechner (lokal) nur von einer Person
   genutzt, als auch auf einem (womoeglich) oeffentlichen Server
@@ -26,6 +41,8 @@
   Aufgaben in kleineren Teams.
 
 # 3. Produktübersicht
+
+![Produktübersicht](./target-group.png)
 
 # 4. Produktfunktionen
 
@@ -61,6 +78,14 @@ Geschaeftsprozess: Ticket loeschen
 Akteur: Benutzer
 
 Beschreibung: Der Nutzer moechte ein Ticket loeschen
+
+## /LF 35/
+
+Geschaeftsprozess: Ticket verschieben
+
+Akteur: Benutzer
+
+Beschreibung: Der Nutzer moechte die Kategorie des Tickets aendern
 
 ## /LF 40/
 
@@ -98,7 +123,7 @@ Beschreibung: Der Nutzer moechte alle Tickets mit einem bestimmten Tag auflisten
 
 ## /LD 10/
   Projekte mit Titel und optionaler Beschreibung, mindestens 10
-  
+
 ## /LD 20/
   Tickets mit Titel und optionaler Bescreibung und optionaler Liste
   von Tags, mindestens 100 pro Projekt
@@ -117,7 +142,7 @@ Beschreibung: Der Nutzer moechte alle Tickets mit einem bestimmten Tag auflisten
 
   Wartet das User-Interface auf den Antwort Server soll ein Indikator
   angezeigt werden
-  
+
 ## /LL 40/
 
   Das User-Interface soll gaengige Operationen eines Web-Browsers
@@ -144,3 +169,10 @@ Beschreibung: Der Nutzer moechte alle Tickets mit einem bestimmten Tag auflisten
   nicht die Gefahr von Sicherheitslucken entsteht. Letzteres ergibt
   sich durch das Client/Server Modell und definierter API von alleine.
 
+# 8. Versionsgeschichte
+
+* Version 0.1 (03.05.2014)
+  Initiale Version (Nicht im Repository)
+  
+* Version 0.2 (04.05.2014)
+  Ergaenzungen, /LF 35/, /LF 15/
