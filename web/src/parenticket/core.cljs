@@ -35,7 +35,7 @@
                                 :current-project nil})))
 
 
-
+(def adapter (api/->ApiAdapter "10.10.10.46" 3000 app-state))
 
 (let [formatter (DateTimeFormat. "dd.MM.yyyy HH:mm")]
   (defn ^:private format-date [date]
@@ -54,6 +54,8 @@
           [:img {:src "edit.png"}]]
          [:a {:href "#"
               :on-click (fn [_]
+                          (let [ticket @ticket]
+                           (api/delete-ticket! adapter (:project_id ticket) ticket))
                           false)}
           [:img {:src "delete.png"}]]]
         [:span.description (:description ticket)]
@@ -110,8 +112,9 @@
         (om/build ticket-column (:done tickets))]
        (om/build project-column state)]))))
 
-(def adapter (api/->ApiAdapter "10.10.10.46" 3000 app-state))
-
-(api/reload-projects! adapter)
+(go
+  (<! (api/reload-projects! adapter))
+  (<! (api/reload-projects! adapter))
+  (<! (api/reload-tickets! adapter (-> app-state deref :projects first val))))
 (om/root parenticket app-state {:target (js/document.getElementById "main")})
 

@@ -78,7 +78,7 @@
         (if (:successful? response)
           (let [ticket-map (into {}
                                  (for [t (:tickets (:response/edn response))]
-                                   [(:id ticket) t]))]
+                                   [(:id t) t]))]
             (println "got tickets:" (pr-str ticket-map))
             (swap! (:session adapter) update-in [:tickets] merge ticket-map))
           (throw (ex-info "Broken shit" {:response response})))))))
