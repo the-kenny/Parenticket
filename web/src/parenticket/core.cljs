@@ -6,6 +6,8 @@
             [cljs.core.async :as async]
             [clojure.string :as s]
 
+            [parenticket.api :as api]
+
             [weasel.repl :as ws-repl])
   (:import [goog.net XhrIo]
            [goog.i18n DateTimeFormat])
@@ -16,27 +18,29 @@
 
 (defrecord AppState [tickets projects current-project])
 
-(def app-state (map->AppState {:tickets (vec
-                                         (for [title (range 10)
-                                               status [:todo :doing :done]]
-                                           {:id title
-                                            :status status
-                                            :name (reduce str (repeat 10 title))
-                                            :deadline (js/Date.)
-                                            :tags ["foo" "bar" "baz" "asdfasdf"]
-                                            :description "asdfasdasdf"}))
-                               :projects (into {}
-                                               (for [n (range 10)]
-                                                 [n {:id n
-                                                     :name (reduce str (repeat 3 n))}]))
-                               :current-project 0}))
+(def app-state (atom
+                (map->AppState {:tickets {} #_(vec
+                                               (for [title (range 10)
+                                                     status [:todo :doing :done]]
+                                                 {:id title
+                                                  :status status
+                                                  :name (reduce str (repeat 10 title))
+                                                  :deadline (js/Date.)
+                                                  :tags ["foo" "bar" "baz" "asdfasdf"]
+                                                  :description "asdfasdasdf"}))
+                                :projects {} #_(into {}
+                                                     (for [n (range 10)]
+                                                       [n {:id n
+                                                           :name (reduce str (repeat 3 n))}]))
+                                :current-project nil})))
 
 
 
 
 (let [formatter (DateTimeFormat. "dd.MM.yyyy HH:mm")]
   (defn ^:private format-date [date]
-    (.format formatter date)))
+    (when (instance? js/Date date)
+     (.format formatter date))))
 
 (defn ticket [ticket owner opts]
   (reify
@@ -92,7 +96,7 @@
 (def render-start nil)
 (defn parenticket [state owner]
   (om/component
-   (let [tickets (group-by :status (:tickets state))]
+   (let [tickets #_(group-by :status (:tickets state)) {:todo (vals (:tickets state))}]
      (html
       [:.app
        [:.pane.todo
@@ -106,5 +110,8 @@
         (om/build ticket-column (:done tickets))]
        (om/build project-column state)]))))
 
+(def adapter (api/->ApiAdapter "10.10.10.46" 3000 app-state))
+
+(api/reload-projects! adapter)
 (om/root parenticket app-state {:target (js/document.getElementById "main")})
 
