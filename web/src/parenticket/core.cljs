@@ -7,7 +7,8 @@
             [clojure.string :as s]
 
             [weasel.repl :as ws-repl])
-  (:import [goog.net XhrIo])
+  (:import [goog.net XhrIo]
+           [goog.i18n DateTimeFormat])
   (:require-macros [cljs.core.async.macros :refer [go go-loop]]))
 
 (enable-console-print!)
@@ -22,6 +23,7 @@
                                             :status status
                                             :name (reduce str (repeat 10 title))
                                             :deadline (js/Date.)
+                                            :tags ["foo" "bar" "baz" "asdfasdf"]
                                             :description "asdfasdasdf"}))
                                :projects (into {}
                                                (for [n (range 10)]
@@ -29,7 +31,12 @@
                                                      :name (reduce str (repeat 3 n))}]))
                                :current-project 0}))
 
-(def render-start nil)
+
+
+
+(let [formatter (DateTimeFormat. "dd.MM.yyyy HH:mm")]
+  (defn ^:private format-date [date]
+    (.format formatter date)))
 
 (defn ticket [ticket owner opts]
   (reify
@@ -46,8 +53,8 @@
                           false)}
           [:img {:src "delete.png"}]]]
         [:span.description (:description ticket)]
-        [:span.deadline (:deadline ticket)]
-        [:span.tags (:tags ticket)]]))))
+        [:span.deadline (format-date (:deadline ticket))]
+        [:span.tags (s/join ", " (:tags ticket))]]))))
 
 (defn ticket-column [tickets owner opts]
   (reify
@@ -82,6 +89,7 @@
                                          (om/set-state! owner :search (-> e .-target .-value))
                                          false)}]]]))))
 
+(def render-start nil)
 (defn parenticket [state owner]
   (om/component
    (let [tickets (group-by :status (:tickets state))]
