@@ -83,6 +83,20 @@
             (swap! (:session adapter) update-in [:tickets] merge ticket-map))
           (throw (ex-info "Broken shit" {:response response})))))))
 
+(defn add-ticket! [adapter project-id ticket]
+  (assert project-id)
+  (assert (:name ticket))
+  (go
+    (let [response
+          (-> (str (base-url adapter) "/projects/" project-id "/tickets/" (:id ticket))
+              (xhr-request! :post (JSON/stringify (clj->js ticket)))
+              (<!))]
+      (println "result:" (pr-str response))
+      (if (:successful? response)
+        (let [ticket (:response/edn response)]
+          (swap! (:session adapter) assoc-in [:tickets (:id ticket)] ticket))
+        (throw (ex-info "add fucked" {:response response}))))))
+
 (defn update-ticket! [adapter project-id ticket]
   (assert project-id)
   (assert (:id ticket))
@@ -95,3 +109,16 @@
      (if (:successful? response)
        (swap! (:session adapter) update-in [:tickets (:id ticket)] merge (:response/edn response))
        (throw (ex-info "update fucked" {:response response}))))))
+
+(defn delete-ticket! [adapter project-id ticket]
+  (assert project-id)
+  (assert (:id ticket))
+  (go
+    (let [response
+          (-> (str (base-url adapter) "/projects/" project-id "/tickets/" (:id ticket))
+              (xhr-request! :delete)
+              (<!))]
+      (println "result:" (pr-str response))
+      (if (:successful? response)
+        (swap! (:session adapter) (fn [session] (update-in session [:tickets] dissoc (:id ticket))))
+        (throw (ex-info "delete fucked" {:response response}))))))
