@@ -60,7 +60,8 @@
          [:a {:href "#"
               :on-click (fn [_]
                           (let [ticket @ticket]
-                           (api/delete-ticket! adapter (:project_id ticket) ticket))
+                            (when (js/confirm "Delete?")
+                             (api/delete-ticket! adapter (:project_id ticket) ticket)))
                           false)}
           [:img {:src "delete.png"}]]]
         [:span.description (:description ticket)]
@@ -75,6 +76,12 @@
        [:ul.tickets
         (om/build-all ticket tickets)]))))
 
+(defn handle-new-project! [state owner]
+  (when-let [name (js/prompt "Project Name?")]
+    (go
+      (when-let [project (<! (api/add-project! adapter name))]
+        (nav/navigate! (nav/project-route {:project (:id project)}))))))
+
 (defn project-column [state owner opts]
   (reify
     om/IInitState
@@ -86,7 +93,11 @@
        [:.pane.project
         [:h1 "Parenticket"]
         [:h2 (get-in state [:projects (:current-project state) :name])]
-        [:h3 "Projects"]
+        [:h3 "Projects"
+         [:button.new-project {:on-click (fn [_]
+                                           (handle-new-project! state owner)
+                                           false)}
+          "New Project"]]
         [:ul.projects
          (for [[id project] (:projects state)]
            [:li.project

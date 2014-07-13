@@ -122,3 +122,17 @@
       (if (:successful? response)
         (swap! (:session adapter) (fn [session] (update-in session [:tickets] dissoc (:id ticket))))
         (throw (ex-info "delete fucked" {:response response}))))))
+
+(defn add-project! [adapter name]
+  (assert name)
+  (go
+    (let [response
+          (-> (str (base-url adapter) "/projects/")
+              (xhr-request! :post (JSON/stringify #js {:name name}))
+              (<!))]
+      (println "result:" (pr-str response))
+      (if (:successful? response)
+        (let [project (:response/edn response)]
+          (swap! (:session adapter) (fn [session] (assoc-in session [:projects (:id project)] project)))
+          project)
+        (throw (ex-info "create project fucked" {:response response}))))))
