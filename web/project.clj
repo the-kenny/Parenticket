@@ -24,7 +24,7 @@
                         :source-paths ["src/"]
                         :compiler {:output-to "resources/public/main.js"
                                    :output-dir "resources/public/out/"
-                                   :optimizations :whitespace
+                                   :optimizations :advanced
                                    :libs [""]
                                    :preamble ["react/react.min.js"]
                                    :externs ["react/externs/react.js"]}}]})

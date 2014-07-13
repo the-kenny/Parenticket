@@ -39,8 +39,8 @@
   (get-in state [:projects (:current-project state)]))
 
 
-(def adapter (api/->ApiAdapter "10.10.10.46" 3000 app-state))
-#_(def adapter (api/->ApiAdapter js/window.location.h 3000 app-state))
+#_(def adapter (api/->ApiAdapter "10.10.10.46" 3000 app-state))
+(def adapter (api/->ApiAdapter js/window.location.hostname 3000 app-state))
 
 (let [formatter (DateTimeFormat. "dd.MM.yyyy HH:mm")]
   (defn ^:private format-date [date]
