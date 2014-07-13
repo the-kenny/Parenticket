@@ -90,7 +90,7 @@
       (html
        [:.pane.project
         [:h1 "Parenticket"]
-        [:h2 (get-in state [:projects (:current-project state) :name])]
+        [:h3 (get-in state [:projects (:current-project state) :name])]
 
         [:ul.actions
          [:li
@@ -141,7 +141,7 @@
 (defn handle-edit! [project-id ticket-id owner]
   (let [ticket (om/get-state owner)
         {:keys [name description tags priority status]} ticket
-        tags (map s/trim tags)]
+        ticket (assoc ticket :tags (map s/trim (s/split tags #",?\W")))]
     (prn (om/get-state owner))
     (if (string? name)
       (go
@@ -180,12 +180,8 @@
           [:input.description {:value description
                                :on-change (partial change owner :description)}]]
          [:label.tags "Tags"
-          [:input.tags {:value (s/join ", " tags)
-                        :on-change (fn [e]
-                                     (om/set-state! owner :tags
-                                                    (-> e .-target .-value
-                                                        (s/split #",\W*")))
-                                     false)}]]
+          [:input.tags {:value (if (string? tags) tags (s/join " " tags))
+                        :on-change (partial change owner :tags)}]]
          [:label.deadline "Deadline"
           [:input.deadline {:value deadline
                             :disabled true}]]
