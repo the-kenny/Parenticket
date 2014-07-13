@@ -97,7 +97,8 @@
          [:input.tagfilter {:type "text"
                             :value search
                             :on-change (fn [e]
-                                         (om/set-state! owner :search (-> e .-target .-value))
+                                         (async/put! (:filter-chan opts)
+                                                     (-> e .-target .-value))
                                          false)}]]]))))
 
 (defn ticket-view [ticket owner opts]
@@ -186,13 +187,18 @@
          [:button.save
           "Save"]]]))))
 
+(defn ticket-matches? [filter ticket]
+  (not= -1 (.indexOf (s/lower-case (reduce str (vals ticket))) filter)))
+
 (def render-start nil)
 (defn parenticket [state owner]
   (reify
     om/IInitState
     (init-state [_]
       {:current-ticket nil
-       :edit? false})
+       :edit? false
+       :ticket-filter ""
+       :filter-chan (async/chan (async/dropping-buffer 1))})
     om/IWillMount
     (will-mount [_]
       (go-loop []
@@ -211,12 +217,20 @@
           ;; Store current ticket
           (om/set-state! owner :current-ticket ticket)
           (om/set-state! owner :edit? edit))
-        (recur)))
+        (recur))
+      ;; Filter
+      (go-loop []
+        (when-let [v (<! (om/get-state owner :filter-chan))]
+          (om/set-state! owner :ticket-filter v)
+          (recur))))
     om/IRenderState
-    (render-state [_ {:keys [current-ticket edit?]}]
+    (render-state [_ {:keys [current-ticket edit? ticket-filter]}]
       (let [current-project (:current-project state)
-            tickets (group-by :status (filter #(= current-project (:project_id %))
-                                              (vals (:tickets state))))]
+            tickets (->> (:tickets state)
+                         vals
+                         (filter #(= current-project (:project_id %)))
+                         (filter (partial ticket-matches? ticket-filter))
+                         (group-by :status))]
         (html
          [:.app
           (when-let [ticket (get-in state [:tickets current-ticket])]
@@ -233,7 +247,8 @@
           [:.pane.done
            [:h2 "Done"]
            (om/build ticket-column (get tickets 2))]
-          (om/build project-column state)])))))
+          (om/build project-column state
+                    {:opts {:filter-chan (om/get-state owner :filter-chan)}})])))))
 
 (om/root parenticket app-state {:target (js/document.getElementById "main")})
 
