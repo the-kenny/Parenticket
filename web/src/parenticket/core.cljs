@@ -7,6 +7,7 @@
             [clojure.string :as s]
 
             [parenticket.api :as api]
+            [parenticket.navigation :as nav]
 
             [weasel.repl :as ws-repl])
   (:import [goog.net XhrIo]
@@ -19,20 +20,23 @@
 (defrecord AppState [tickets projects current-project])
 
 (def app-state (atom
-                (map->AppState {:tickets {} #_(vec
-                                               (for [title (range 10)
-                                                     status [:todo :doing :done]]
-                                                 {:id title
-                                                  :status status
-                                                  :name (reduce str (repeat 10 title))
-                                                  :deadline (js/Date.)
-                                                  :tags ["foo" "bar" "baz" "asdfasdf"]
-                                                  :description "asdfasdasdf"}))
+                (map->AppState {:tickets {} #_(into {}
+                                                    (for [title (range 10)
+                                                          status [:todo :doing :done]]
+                                                      [(str title) {:id (str title)
+                                                                    :status status
+                                                                    :name (reduce str (repeat 10 title))
+                                                                    :deadline (js/Date.)
+                                                                    :tags ["foo" "bar" "baz" "asdfasdf"]
+                                                                    :description "asdfasdasdf"}]))
                                 :projects {} #_(into {}
                                                      (for [n (range 10)]
-                                                       [n {:id n
-                                                           :name (reduce str (repeat 3 n))}]))
+                                                       [(str n) {:id (str n)
+                                                                 :name (reduce str (repeat 3 n))}]))
                                 :current-project nil})))
+
+(defn current-project [state]
+  (get-in state [:projects (:current-project state)]))
 
 
 (def adapter (api/->ApiAdapter "10.10.10.46" 3000 app-state))
@@ -50,7 +54,8 @@
        [:li.ticket
         [:h3.name (:name ticket)]
         [:.actions
-         [:a {:href "#"}
+         [:a {:href (nav/edit-ticket-route {:project (:project_id ticket)
+                                            :ticket (:id ticket)})}
           [:img {:src "edit.png"}]]
          [:a {:href "#"
               :on-click (fn [_]
@@ -78,7 +83,7 @@
     om/IRenderState
     (render-state [_ {:keys [search]}]
       (html
-       [:div.pane.project
+       [:.pane.project
         [:h1 "Parenticket"]
         [:h2 (get-in state [:projects (:current-project state) :name])]
         [:h3 "Projects"]
@@ -95,26 +100,140 @@
                                          (om/set-state! owner :search (-> e .-target .-value))
                                          false)}]]]))))
 
+(defn ticket-view [ticket owner opts]
+  (om/component
+   (html
+    [:.dialog.ticket
+     [:.close {:on-click (fn [_]
+                           (when (fn? (:close opts)) ((:close opts)))
+                           false)}
+      "X"]
+     [:h3 "Ticket"]
+     [:label.name "Name"
+      [:span.name (:name ticket)]]
+     [:label.description "Description"
+      [:span.description (:description ticket)]]
+     [:label.tags "Tags"
+      [:span.tags (s/join ", " (:tags ticket))]]
+     [:label.deadline "Deadline"
+      [:span.deadline (:deadline ticket)]]
+     [:label.priority "Priority"
+      [:span.priority (:projects ticket)]]])))
+
+(defn handle-edit! [project-id ticket-id owner]
+  (let [ticket (om/get-state owner)
+        {:keys [name description tags priority status]} ticket
+        tags (map s/trim tags)]
+    (prn (om/get-state owner))
+    (if (string? name)
+      (go
+        (println "Saving...")
+        (when (<! (api/update-ticket! adapter project-id  (assoc ticket
+                                                            :id ticket-id)))
+          (nav/navigate! (nav/project-route {:project project-id}))))
+      (throw (ex-info "name empty" (:ticket ticket))))))
+
+(defn change [owner key e]
+  (om/set-state! owner key (-> e .-target .-value)))
+
+(defn edit-ticket-view [ticket owner opts]
+  (reify
+    om/IInitState
+    (init-state [_]
+      (om/value ticket))
+    om/IRenderState
+    (render-state [_ {:keys [name description tags priority deadline status]}]
+      (html
+       [:.dialog.ticket
+        [:.close {:on-click (fn [_]
+                              (when (fn? (:close opts)) ((:close opts)))
+                              false)}
+         "X"]
+        [:form {:on-submit (fn [_]
+                             (handle-edit! (:project_id @ticket) (:id @ticket) owner)
+                             false)}
+         [:h3 "Ticket"]
+         [:label.name "Name"
+          [:input.name {:value name
+                        :on-change (partial change owner :name)}]]
+         [:label.description "Description"
+          [:input.description {:value description
+                               :on-change (partial change owner :description)}]]
+         [:label.tags "Tags"
+          [:input.tags {:value (s/join ", " tags)
+                        :on-change (fn [e]
+                                     (om/set-state! owner :tags
+                                                    (-> e .-target .-value
+                                                        (s/split #",\W*")))
+                                     false)}]]
+         [:label.deadline "Deadline"
+          [:input.deadline {:value deadline
+                            :disabled true}]]
+         [:label.priority "Priority"
+          [:input.priority {:value priority
+                            :on-change (partial change owner :priority)}]]
+         [:label.status "Status"
+          [:select.status {:value status
+                           :on-change (partial change owner :status)}
+           [:option {:value 0} "Todo"]
+           [:option {:value 1} "Doing"]
+           [:option {:value 2} "Done"]]]
+
+         [:button.cancel {:on-click (fn [_]
+                                      (when (fn? (:close opts)) ((:close opts)))
+                                      false)}
+          "Cancel"]
+         [:button.save
+          "Save"]]]))))
+
 (def render-start nil)
 (defn parenticket [state owner]
-  (om/component
-   (let [tickets #_(group-by :status (:tickets state)) {:todo (vals (:tickets state))}]
-     (html
-      [:.app
-       [:.pane.todo
-        [:h2 "Todo"]
-        (om/build ticket-column (:todo tickets))]
-       [:.pane.doing
-        [:h2 "Doing"]
-        (om/build ticket-column (:doing tickets))]
-       [:.pane.done
-        [:h2 "Done"]
-        (om/build ticket-column (:done tickets))]
-       (om/build project-column state)]))))
+  (reify
+    om/IInitState
+    (init-state [_]
+      {:current-ticket nil
+       :edit? false})
+    om/IWillMount
+    (will-mount [_]
+      (go-loop []
+        (<! (api/reload-projects! adapter))
+        (let [{:keys [project ticket edit]} (<! nav/navigation-channel)]
+          (prn project ticket)
+          ;; Store current project
+          (if (contains? (:projects @state) project)
+            (do
+              (println "Switching to project " project)
+              (when (not= project (:current-project @state))
+                ;; Load tickets
+                (<! (api/reload-tickets! adapter (get-in @state [:projects project]))))
+              (om/update! state :current-project project))
+            (println "Got unknown project :("))
+          ;; Store current ticket
+          (om/set-state! owner :current-ticket ticket)
+          (om/set-state! owner :edit? edit))
+        (recur)))
+    om/IRenderState
+    (render-state [_ {:keys [current-ticket edit?]}]
+      (let [current-project (:current-project state)
+            tickets (group-by :status (filter #(= current-project (:project_id %))
+                                              (vals (:tickets state))))]
+        (html
+         [:.app
+          (when-let [ticket (get-in state [:tickets current-ticket])]
+            (list
+             [:.overlay]
+             (om/build (if edit? edit-ticket-view ticket-view) ticket
+                       {:opts {:close #(nav/navigate! (nav/project-route {:project (:current-project @state)} ))}})))
+          [:.pane.todo
+           [:h2 "Todo"]
+           (om/build ticket-column (get tickets 0))]
+          [:.pane.doing
+           [:h2 "Doing"]
+           (om/build ticket-column (get tickets 1))]
+          [:.pane.done
+           [:h2 "Done"]
+           (om/build ticket-column (get tickets 2))]
+          (om/build project-column state)])))))
 
-(go
-  (<! (api/reload-projects! adapter))
-  (<! (api/reload-projects! adapter))
-  (<! (api/reload-tickets! adapter (-> app-state deref :projects first val))))
 (om/root parenticket app-state {:target (js/document.getElementById "main")})
 
