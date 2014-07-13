@@ -40,6 +40,7 @@
 
 
 (def adapter (api/->ApiAdapter "10.10.10.46" 3000 app-state))
+#_(def adapter (api/->ApiAdapter js/window.location.h 3000 app-state))
 
 (let [formatter (DateTimeFormat. "dd.MM.yyyy HH:mm")]
   (defn ^:private format-date [date]
@@ -148,7 +149,7 @@
         (when (<! (if ticket-id
                     (api/update-ticket! adapter project-id  (assoc ticket
                                                               :id ticket-id))
-                    (api/add-ticket! adapter project-id  (dissoc ticket :project_id))))
+                    (api/add-ticket! adapter project-id (dissoc ticket :project_id))))
           (nav/navigate! (nav/project-route {:project project-id}))))
       (throw (ex-info "name empty" (:ticket ticket))))))
 
@@ -198,11 +199,12 @@
            [:option {:value 1} "Doing"]
            [:option {:value 2} "Done"]]]
 
-         [:button.cancel {:on-click (fn [_]
+         [:button.cancel {:type "button"
+                          :on-click (fn [_]
                                       (when (fn? (:close opts)) ((:close opts)))
                                       false)}
           "Cancel"]
-         [:button.save
+         [:button.save {:type :submit}
           "Save"]]]))))
 
 (defn ticket-matches? [filter ticket]
