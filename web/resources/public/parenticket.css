@@ -1,0 +1,161 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Courier New", Courier, monospace
+}
+
+body {
+    overflow: hidden;
+}
+
+.pane {
+    float: left;
+    position: relative;
+    width: 25%;
+    height: 100%;
+}
+
+.pane h2 {
+    padding: 0.5em;
+    height: 1em;
+}
+
+.pane .tickets {
+    height: calc(100% - 4em);
+    overflow: auto;
+    padding: 0.5em;
+}
+
+.pane.todo {
+    background-color: #aaaaaa;
+}
+
+.pane.doing {
+    background-color: #dddddd;
+}
+
+.pane.done {
+    background-color: #aaaaaa;
+}
+
+.pane.project {
+    background-color: #dddddd;
+}
+
+.pane.todo h2, .pane.doing h2, .pane.done h2 {
+    font-size: 20pt;
+    color: #666666;
+}
+
+.pane.project h1 {
+    font-size: 26pt;
+    color: #666666;
+    height: 1em;
+    padding: 0.5em 0.5em 0em 0.5em;
+    text-shadow: 3px 3px 3px #cccccc;
+}
+
+.deadline {
+    text-align: left;
+    display:block;
+    float: left;
+}
+
+.tags {
+    text-align: right;
+    display: block;
+    clear: right;
+}
+
+.pane.project h2 {
+    text-align: left;
+    color: #333333;
+    font-size: 20pt;
+    padding: 0.5em 0.5em 1em 2em;
+}
+
+.pane.project h3 {
+    color: #333333;
+    font-size: 20pt;
+    padding: 0.5em 0.5em 0em 0.5em;
+}
+
+.pane.project ul {
+    padding: 0.5em 0.5em 1em 2em;
+}
+
+.pane.project .extralink {
+    padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.pane.todo .ticket, .pane.doing .ticket, .pane.done .ticket {
+    padding-bottom: 0.5em;
+s}
+
+.pane.todo .ticket .description, .pane.doing .ticket .description, .pane.done .ticket .description {
+    display: block;
+    clear: both;
+}
+
+.tagfilter {
+    margin: 0.5em;
+}
+
+.pane.project h4 {
+    color: #333333;
+    font-size: 14pt;
+    padding: 0.5em 0.5em 0em 0.5em;
+}
+
+.ticket h3 {
+    float: left;
+    display: block;
+    position: relative;
+}
+
+.ticket .actions {
+    text-align: right
+    display: block;
+    position: relative;
+    clear: right;
+    float: right;
+}
+
+.ticket .actions a img {
+    width: 1em;
+    height: 1em;
+}
+
+.pane.todo .ticket .deadline, .pane.doing .ticket .deadline, .pane.done .ticket .deadline {
+    
+}
+
+.overlay {
+  z-index: 50;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0; top: 0;
+}
+
+.dialog {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  z-index: 100;
+  background: white;
+  margin: auto auto;
+  top: 0; bottom: 0;
+  right: 0; left: 0;
+}
+
+.dialog label {
+  display: block;
+  width: 100%;
+}
+
+.dialog label span {
+  padding: 10px;
+  padding-left: 0;
+}
