@@ -84,25 +84,23 @@
 
 (defn project-column [state owner opts]
   (reify
-    om/IInitState
-    (init-state [_]
-      {:search ""})
     om/IRenderState
     (render-state [_ {:keys [search]}]
       (html
        [:.pane.project
         [:h1 "Parenticket"]
         [:h2 (get-in state [:projects (:current-project state) :name])]
-        [:h3 "Projects"
-         [:button.new-project {:on-click (fn [_]
-                                           (handle-new-project! state owner)
-                                           false)}
-          "New Project"]]
-        [:ul.projects
-         (for [[id project] (:projects state)]
-           [:li.project
-            [:a {:href (str "#/project/" id)}
-             (:name project)]])]
+
+        [:ul.actions
+         [:li
+          [:a.new-project {:href "#"
+                           :on-click (fn [_]
+                                       (handle-new-project! state owner)
+                                       false)}
+           "New Project"]]
+         [:li
+          [:a.new-ticket {:href (nav/new-ticket-route {:project (:current-project state)})}
+           "New Ticket"]]]
         [:form.filter
          [:h4 "Filter"]
          [:input.tagfilter {:type "text"
@@ -110,7 +108,14 @@
                             :on-change (fn [e]
                                          (async/put! (:filter-chan opts)
                                                      (-> e .-target .-value))
-                                         false)}]]]))))
+                                         false)}]]
+        [:h3 "Projects"]
+        [:ul.projects
+         (for [[id project] (:projects state)]
+           [:li.project
+            [:a {:href (str "#/project/" id)}
+             (:name project)]])]
+        ]))))
 
 (defn ticket-view [ticket owner opts]
   (om/component
@@ -140,8 +145,10 @@
     (if (string? name)
       (go
         (println "Saving...")
-        (when (<! (api/update-ticket! adapter project-id  (assoc ticket
-                                                            :id ticket-id)))
+        (when (<! (if ticket-id
+                    (api/update-ticket! adapter project-id  (assoc ticket
+                                                              :id ticket-id))
+                    (api/add-ticket! adapter project-id  (dissoc ticket :project_id))))
           (nav/navigate! (nav/project-route {:project project-id}))))
       (throw (ex-info "name empty" (:ticket ticket))))))
 
@@ -162,7 +169,7 @@
                               false)}
          "X"]
         [:form {:on-submit (fn [_]
-                             (handle-edit! (:project_id @ticket) (:id @ticket) owner)
+                             (handle-edit! (:project_id ticket) (:id ticket) owner)
                              false)}
          [:h3 "Ticket"]
          [:label.name "Name"
@@ -215,7 +222,7 @@
       (go-loop []
         (<! (api/reload-projects! adapter))
         (let [{:keys [project ticket edit]} (<! nav/navigation-channel)]
-          (prn project ticket)
+          (prn "asdfasdf" project ticket)
           ;; Store current project
           (if (contains? (:projects @state) project)
             (do
@@ -244,11 +251,13 @@
                          (group-by :status))]
         (html
          [:.app
-          (when-let [ticket (get-in state [:tickets current-ticket])]
+          (when edit?
             (list
              [:.overlay]
-             (om/build (if edit? edit-ticket-view ticket-view) ticket
-                       {:opts {:close #(nav/navigate! (nav/project-route {:project (:current-project @state)} ))}})))
+             (let [ticket (get-in state [:tickets current-ticket])]
+               (om/build (if edit? edit-ticket-view ticket-view) (or (om/value ticket)
+                                                                     {:project_id (:current-project state)})
+                         {:opts {:close #(nav/navigate! (nav/project-route {:project (:current-project @state)} ))}}))))
           [:.pane.todo
            [:h2 "Todo"]
            (om/build ticket-column (get tickets 0))]
@@ -259,7 +268,8 @@
            [:h2 "Done"]
            (om/build ticket-column (get tickets 2))]
           (om/build project-column state
-                    {:opts {:filter-chan (om/get-state owner :filter-chan)}})])))))
+                    {:opts {:filter-chan (om/get-state owner :filter-chan)}
+                     :state {:search ticket-filter}})])))))
 
 (om/root parenticket app-state {:target (js/document.getElementById "main")})
 

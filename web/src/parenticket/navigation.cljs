@@ -32,6 +32,11 @@
    (async/put! navigation-channel {:project project
                                    :ticket ticket})))
 
+(secretary/defroute new-ticket-route "/project/:project/new-ticket" [project]
+  (let [project (if (string? project) (js/parseInt project) project)]
+    (async/put! navigation-channel {:project project
+                                    :edit true})))
+
 (secretary/defroute edit-ticket-route "/project/:project/ticket/:ticket/edit" [project ticket]
   (let [project (if (string? project) (js/parseInt project) project)
         ticket (if (string? ticket) (js/parseInt ticket) ticket)]
