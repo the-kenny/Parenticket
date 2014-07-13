@@ -55843,11 +55843,11 @@ parenticket.core.AppState.prototype.cljs$core$ILookup$_lookup$arity$2 = function
   var this__5614__auto____$1 = this;
   return cljs.core._lookup.call(null, this__5614__auto____$1, k__5615__auto__, null);
 };
-parenticket.core.AppState.prototype.cljs$core$ILookup$_lookup$arity$3 = function(this__5616__auto__, k18258, else__5617__auto__) {
+parenticket.core.AppState.prototype.cljs$core$ILookup$_lookup$arity$3 = function(this__5616__auto__, k22157, else__5617__auto__) {
   var self__ = this;
   var this__5616__auto____$1 = this;
-  var G__18260 = k18258 instanceof cljs.core.Keyword ? k18258.fqn : null;
-  switch(G__18260) {
+  var G__22159 = k22157 instanceof cljs.core.Keyword ? k22157.fqn : null;
+  switch(G__22159) {
     case "current-project":
       return self__.current_project;
       break;
@@ -55858,7 +55858,7 @@ parenticket.core.AppState.prototype.cljs$core$ILookup$_lookup$arity$3 = function
       return self__.tickets;
       break;
     default:
-      return cljs.core.get.call(null, self__.__extmap, k18258, else__5617__auto__);
+      return cljs.core.get.call(null, self__.__extmap, k22157, else__5617__auto__);
   }
 };
 parenticket.core.AppState.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = function(this__5628__auto__, writer__5629__auto__, opts__5630__auto__) {
@@ -55924,21 +55924,21 @@ parenticket.core.AppState.prototype.cljs$core$IMap$_dissoc$arity$2 = function(th
     return new parenticket.core.AppState(self__.tickets, self__.projects, self__.current_project, self__.__meta, cljs.core.not_empty.call(null, cljs.core.dissoc.call(null, self__.__extmap, k__5624__auto__)), null);
   }
 };
-parenticket.core.AppState.prototype.cljs$core$IAssociative$_assoc$arity$3 = function(this__5621__auto__, k__5622__auto__, G__18257) {
+parenticket.core.AppState.prototype.cljs$core$IAssociative$_assoc$arity$3 = function(this__5621__auto__, k__5622__auto__, G__22156) {
   var self__ = this;
   var this__5621__auto____$1 = this;
-  var pred__18261 = cljs.core.keyword_identical_QMARK_;
-  var expr__18262 = k__5622__auto__;
-  if (cljs.core.truth_(pred__18261.call(null, new cljs.core.Keyword(null, "tickets", "tickets", -2077135171), expr__18262))) {
-    return new parenticket.core.AppState(G__18257, self__.projects, self__.current_project, self__.__meta, self__.__extmap, null);
+  var pred__22160 = cljs.core.keyword_identical_QMARK_;
+  var expr__22161 = k__5622__auto__;
+  if (cljs.core.truth_(pred__22160.call(null, new cljs.core.Keyword(null, "tickets", "tickets", -2077135171), expr__22161))) {
+    return new parenticket.core.AppState(G__22156, self__.projects, self__.current_project, self__.__meta, self__.__extmap, null);
   } else {
-    if (cljs.core.truth_(pred__18261.call(null, new cljs.core.Keyword(null, "projects", "projects", -364845983), expr__18262))) {
-      return new parenticket.core.AppState(self__.tickets, G__18257, self__.current_project, self__.__meta, self__.__extmap, null);
+    if (cljs.core.truth_(pred__22160.call(null, new cljs.core.Keyword(null, "projects", "projects", -364845983), expr__22161))) {
+      return new parenticket.core.AppState(self__.tickets, G__22156, self__.current_project, self__.__meta, self__.__extmap, null);
     } else {
-      if (cljs.core.truth_(pred__18261.call(null, new cljs.core.Keyword(null, "current-project", "current-project", 903630396), expr__18262))) {
-        return new parenticket.core.AppState(self__.tickets, self__.projects, G__18257, self__.__meta, self__.__extmap, null);
+      if (cljs.core.truth_(pred__22160.call(null, new cljs.core.Keyword(null, "current-project", "current-project", 903630396), expr__22161))) {
+        return new parenticket.core.AppState(self__.tickets, self__.projects, G__22156, self__.__meta, self__.__extmap, null);
       } else {
-        return new parenticket.core.AppState(self__.tickets, self__.projects, self__.current_project, self__.__meta, cljs.core.assoc.call(null, self__.__extmap, k__5622__auto__, G__18257), null);
+        return new parenticket.core.AppState(self__.tickets, self__.projects, self__.current_project, self__.__meta, cljs.core.assoc.call(null, self__.__extmap, k__5622__auto__, G__22156), null);
       }
     }
   }
@@ -55949,10 +55949,10 @@ parenticket.core.AppState.prototype.cljs$core$ISeqable$_seq$arity$1 = function(t
   return cljs.core.seq.call(null, cljs.core.concat.call(null, new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tickets", "tickets", -2077135171), self__.tickets], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "projects", "projects", -364845983), self__.projects], null), new cljs.core.PersistentVector(null, 
   2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "current-project", "current-project", 903630396), self__.current_project], null)], null), self__.__extmap));
 };
-parenticket.core.AppState.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(this__5613__auto__, G__18257) {
+parenticket.core.AppState.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(this__5613__auto__, G__22156) {
   var self__ = this;
   var this__5613__auto____$1 = this;
-  return new parenticket.core.AppState(self__.tickets, self__.projects, self__.current_project, G__18257, self__.__extmap, self__.__hash);
+  return new parenticket.core.AppState(self__.tickets, self__.projects, self__.current_project, G__22156, self__.__extmap, self__.__hash);
 };
 parenticket.core.AppState.prototype.cljs$core$ICollection$_conj$arity$2 = function(this__5619__auto__, entry__5620__auto__) {
   var self__ = this;
@@ -55973,8 +55973,8 @@ parenticket.core.AppState.cljs$lang$ctorPrWriter = function(this__5648__auto__, 
 parenticket.core.__GT_AppState = function __GT_AppState(tickets, projects, current_project) {
   return new parenticket.core.AppState(tickets, projects, current_project);
 };
-parenticket.core.map__GT_AppState = function map__GT_AppState(G__18259) {
-  return new parenticket.core.AppState((new cljs.core.Keyword(null, "tickets", "tickets", -2077135171)).cljs$core$IFn$_invoke$arity$1(G__18259), (new cljs.core.Keyword(null, "projects", "projects", -364845983)).cljs$core$IFn$_invoke$arity$1(G__18259), (new cljs.core.Keyword(null, "current-project", "current-project", 903630396)).cljs$core$IFn$_invoke$arity$1(G__18259), null, cljs.core.dissoc.call(null, G__18259, new cljs.core.Keyword(null, "tickets", "tickets", -2077135171), new cljs.core.Keyword(null, 
+parenticket.core.map__GT_AppState = function map__GT_AppState(G__22158) {
+  return new parenticket.core.AppState((new cljs.core.Keyword(null, "tickets", "tickets", -2077135171)).cljs$core$IFn$_invoke$arity$1(G__22158), (new cljs.core.Keyword(null, "projects", "projects", -364845983)).cljs$core$IFn$_invoke$arity$1(G__22158), (new cljs.core.Keyword(null, "current-project", "current-project", 903630396)).cljs$core$IFn$_invoke$arity$1(G__22158), null, cljs.core.dissoc.call(null, G__22158, new cljs.core.Keyword(null, "tickets", "tickets", -2077135171), new cljs.core.Keyword(null, 
   "projects", "projects", -364845983), new cljs.core.Keyword(null, "current-project", "current-project", 903630396)));
 };
 parenticket.core.app_state = cljs.core.atom.call(null, parenticket.core.map__GT_AppState.call(null, new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "tickets", "tickets", -2077135171), cljs.core.PersistentArrayMap.EMPTY, new cljs.core.Keyword(null, "projects", "projects", -364845983), cljs.core.PersistentArrayMap.EMPTY, new cljs.core.Keyword(null, "current-project", "current-project", 903630396), null], null)));
@@ -55982,135 +55982,135 @@ parenticket.core.current_project = function current_project(state) {
   return cljs.core.get_in.call(null, state, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "projects", "projects", -364845983), (new cljs.core.Keyword(null, "current-project", "current-project", 903630396)).cljs$core$IFn$_invoke$arity$1(state)], null));
 };
 parenticket.core.adapter = parenticket.api.__GT_ApiAdapter.call(null, "10.10.10.46", 3E3, parenticket.core.app_state);
-var formatter_18265 = new goog.i18n.DateTimeFormat("dd.MM.yyyy HH:mm");
-parenticket.core.format_date = function(formatter_18265) {
+var formatter_22164 = new goog.i18n.DateTimeFormat("dd.MM.yyyy HH:mm");
+parenticket.core.format_date = function(formatter_22164) {
   return function format_date(date) {
     if (date instanceof Date) {
-      return formatter_18265.format(date);
+      return formatter_22164.format(date);
     } else {
       return null;
     }
   };
-}(formatter_18265);
+}(formatter_22164);
 parenticket.core.ticket = function ticket(ticket__$1, owner, opts) {
-  if (typeof parenticket.core.t18277 !== "undefined") {
+  if (typeof parenticket.core.t22176 !== "undefined") {
   } else {
-    parenticket.core.t18277 = function(opts, owner, ticket, meta18278) {
+    parenticket.core.t22176 = function(opts, owner, ticket, meta22177) {
       this.opts = opts;
       this.owner = owner;
       this.ticket = ticket;
-      this.meta18278 = meta18278;
+      this.meta22177 = meta22177;
       this.cljs$lang$protocol_mask$partition1$ = 0;
       this.cljs$lang$protocol_mask$partition0$ = 393216;
     };
-    parenticket.core.t18277.cljs$lang$type = true;
-    parenticket.core.t18277.cljs$lang$ctorStr = "parenticket.core/t18277";
-    parenticket.core.t18277.cljs$lang$ctorPrWriter = function(this__5595__auto__, writer__5596__auto__, opt__5597__auto__) {
-      return cljs.core._write.call(null, writer__5596__auto__, "parenticket.core/t18277");
+    parenticket.core.t22176.cljs$lang$type = true;
+    parenticket.core.t22176.cljs$lang$ctorStr = "parenticket.core/t22176";
+    parenticket.core.t22176.cljs$lang$ctorPrWriter = function(this__5595__auto__, writer__5596__auto__, opt__5597__auto__) {
+      return cljs.core._write.call(null, writer__5596__auto__, "parenticket.core/t22176");
     };
-    parenticket.core.t18277.prototype.om$core$IRender$ = true;
-    parenticket.core.t18277.prototype.om$core$IRender$render$arity$1 = function(_) {
+    parenticket.core.t22176.prototype.om$core$IRender$ = true;
+    parenticket.core.t22176.prototype.om$core$IRender$render$arity$1 = function(_) {
       var self__ = this;
       var ___$1 = this;
       return React.DOM.li({"className":"ticket"}, function() {
-        var attrs18280 = (new cljs.core.Keyword(null, "name", "name", 1843675177)).cljs$core$IFn$_invoke$arity$1(self__.ticket);
-        if (cljs.core.map_QMARK_.call(null, attrs18280)) {
-          return React.DOM.h3(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["name"], null)], null), attrs18280)), null);
+        var attrs22179 = (new cljs.core.Keyword(null, "name", "name", 1843675177)).cljs$core$IFn$_invoke$arity$1(self__.ticket);
+        if (cljs.core.map_QMARK_.call(null, attrs22179)) {
+          return React.DOM.h3(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["name"], null)], null), attrs22179)), null);
         } else {
-          return React.DOM.h3({"className":"name"}, sablono.interpreter.interpret.call(null, attrs18280));
+          return React.DOM.h3({"className":"name"}, sablono.interpreter.interpret.call(null, attrs22179));
         }
       }(), React.DOM.div({"className":"actions"}, React.DOM.a({"href":parenticket.navigation.edit_ticket_route.call(null, new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "project", "project", 1124394579), (new cljs.core.Keyword(null, "project_id", "project_id", 1147160698)).cljs$core$IFn$_invoke$arity$1(self__.ticket), new cljs.core.Keyword(null, "ticket", "ticket", 1810559700), (new cljs.core.Keyword(null, "id", "id", -1388402092)).cljs$core$IFn$_invoke$arity$1(self__.ticket)], 
       null))}, React.DOM.img({"src":"edit.png"})), React.DOM.a({"href":"#", "onClick":function(___$1) {
         return function(___$2) {
-          var ticket_18288__$3 = cljs.core.deref.call(null, self__.ticket);
+          var ticket_22187__$3 = cljs.core.deref.call(null, self__.ticket);
           if (cljs.core.truth_(confirm("Delete?"))) {
-            parenticket.api.delete_ticket_BANG_.call(null, parenticket.core.adapter, (new cljs.core.Keyword(null, "project_id", "project_id", 1147160698)).cljs$core$IFn$_invoke$arity$1(ticket_18288__$3), ticket_18288__$3);
+            parenticket.api.delete_ticket_BANG_.call(null, parenticket.core.adapter, (new cljs.core.Keyword(null, "project_id", "project_id", 1147160698)).cljs$core$IFn$_invoke$arity$1(ticket_22187__$3), ticket_22187__$3);
           } else {
           }
           return false;
         };
       }(___$1)}, React.DOM.img({"src":"delete.png"}))), function() {
-        var attrs18285 = (new cljs.core.Keyword(null, "description", "description", -1428560544)).cljs$core$IFn$_invoke$arity$1(self__.ticket);
-        if (cljs.core.map_QMARK_.call(null, attrs18285)) {
-          return React.DOM.span(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["description"], null)], null), attrs18285)), null);
+        var attrs22184 = (new cljs.core.Keyword(null, "description", "description", -1428560544)).cljs$core$IFn$_invoke$arity$1(self__.ticket);
+        if (cljs.core.map_QMARK_.call(null, attrs22184)) {
+          return React.DOM.span(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["description"], null)], null), attrs22184)), null);
         } else {
-          return React.DOM.span({"className":"description"}, sablono.interpreter.interpret.call(null, attrs18285));
+          return React.DOM.span({"className":"description"}, sablono.interpreter.interpret.call(null, attrs22184));
         }
       }(), function() {
-        var attrs18286 = parenticket.core.format_date.call(null, (new cljs.core.Keyword(null, "deadline", "deadline", 628964572)).cljs$core$IFn$_invoke$arity$1(self__.ticket));
-        if (cljs.core.map_QMARK_.call(null, attrs18286)) {
-          return React.DOM.span(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["deadline"], null)], null), attrs18286)), null);
+        var attrs22185 = parenticket.core.format_date.call(null, (new cljs.core.Keyword(null, "deadline", "deadline", 628964572)).cljs$core$IFn$_invoke$arity$1(self__.ticket));
+        if (cljs.core.map_QMARK_.call(null, attrs22185)) {
+          return React.DOM.span(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["deadline"], null)], null), attrs22185)), null);
         } else {
-          return React.DOM.span({"className":"deadline"}, sablono.interpreter.interpret.call(null, attrs18286));
+          return React.DOM.span({"className":"deadline"}, sablono.interpreter.interpret.call(null, attrs22185));
         }
       }(), function() {
-        var attrs18287 = clojure.string.join.call(null, ", ", (new cljs.core.Keyword(null, "tags", "tags", 1771418977)).cljs$core$IFn$_invoke$arity$1(self__.ticket));
-        if (cljs.core.map_QMARK_.call(null, attrs18287)) {
-          return React.DOM.span(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["tags"], null)], null), attrs18287)), null);
+        var attrs22186 = clojure.string.join.call(null, ", ", (new cljs.core.Keyword(null, "tags", "tags", 1771418977)).cljs$core$IFn$_invoke$arity$1(self__.ticket));
+        if (cljs.core.map_QMARK_.call(null, attrs22186)) {
+          return React.DOM.span(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["tags"], null)], null), attrs22186)), null);
         } else {
-          return React.DOM.span({"className":"tags"}, sablono.interpreter.interpret.call(null, attrs18287));
+          return React.DOM.span({"className":"tags"}, sablono.interpreter.interpret.call(null, attrs22186));
         }
       }());
     };
-    parenticket.core.t18277.prototype.cljs$core$IMeta$_meta$arity$1 = function(_18279) {
+    parenticket.core.t22176.prototype.cljs$core$IMeta$_meta$arity$1 = function(_22178) {
       var self__ = this;
-      var _18279__$1 = this;
-      return self__.meta18278;
+      var _22178__$1 = this;
+      return self__.meta22177;
     };
-    parenticket.core.t18277.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(_18279, meta18278__$1) {
+    parenticket.core.t22176.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(_22178, meta22177__$1) {
       var self__ = this;
-      var _18279__$1 = this;
-      return new parenticket.core.t18277(self__.opts, self__.owner, self__.ticket, meta18278__$1);
+      var _22178__$1 = this;
+      return new parenticket.core.t22176(self__.opts, self__.owner, self__.ticket, meta22177__$1);
     };
-    parenticket.core.__GT_t18277 = function __GT_t18277(opts__$1, owner__$1, ticket__$2, meta18278) {
-      return new parenticket.core.t18277(opts__$1, owner__$1, ticket__$2, meta18278);
+    parenticket.core.__GT_t22176 = function __GT_t22176(opts__$1, owner__$1, ticket__$2, meta22177) {
+      return new parenticket.core.t22176(opts__$1, owner__$1, ticket__$2, meta22177);
     };
   }
-  return new parenticket.core.t18277(opts, owner, ticket__$1, null);
+  return new parenticket.core.t22176(opts, owner, ticket__$1, null);
 };
 parenticket.core.ticket_column = function ticket_column(tickets, owner, opts) {
-  if (typeof parenticket.core.t18293 !== "undefined") {
+  if (typeof parenticket.core.t22192 !== "undefined") {
   } else {
-    parenticket.core.t18293 = function(opts, owner, tickets, ticket_column, meta18294) {
+    parenticket.core.t22192 = function(opts, owner, tickets, ticket_column, meta22193) {
       this.opts = opts;
       this.owner = owner;
       this.tickets = tickets;
       this.ticket_column = ticket_column;
-      this.meta18294 = meta18294;
+      this.meta22193 = meta22193;
       this.cljs$lang$protocol_mask$partition1$ = 0;
       this.cljs$lang$protocol_mask$partition0$ = 393216;
     };
-    parenticket.core.t18293.cljs$lang$type = true;
-    parenticket.core.t18293.cljs$lang$ctorStr = "parenticket.core/t18293";
-    parenticket.core.t18293.cljs$lang$ctorPrWriter = function(this__5595__auto__, writer__5596__auto__, opt__5597__auto__) {
-      return cljs.core._write.call(null, writer__5596__auto__, "parenticket.core/t18293");
+    parenticket.core.t22192.cljs$lang$type = true;
+    parenticket.core.t22192.cljs$lang$ctorStr = "parenticket.core/t22192";
+    parenticket.core.t22192.cljs$lang$ctorPrWriter = function(this__5595__auto__, writer__5596__auto__, opt__5597__auto__) {
+      return cljs.core._write.call(null, writer__5596__auto__, "parenticket.core/t22192");
     };
-    parenticket.core.t18293.prototype.om$core$IRender$ = true;
-    parenticket.core.t18293.prototype.om$core$IRender$render$arity$1 = function(_) {
+    parenticket.core.t22192.prototype.om$core$IRender$ = true;
+    parenticket.core.t22192.prototype.om$core$IRender$render$arity$1 = function(_) {
       var self__ = this;
       var ___$1 = this;
-      var attrs18296 = om.core.build_all.call(null, parenticket.core.ticket, self__.tickets);
-      if (cljs.core.map_QMARK_.call(null, attrs18296)) {
-        return React.DOM.ul(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["tickets"], null)], null), attrs18296)), null);
+      var attrs22195 = om.core.build_all.call(null, parenticket.core.ticket, cljs.core.rseq.call(null, cljs.core.vec.call(null, cljs.core.sort_by.call(null, cljs.core.comp.call(null, parseInt, new cljs.core.Keyword(null, "priority", "priority", 1431093715)), self__.tickets))));
+      if (cljs.core.map_QMARK_.call(null, attrs22195)) {
+        return React.DOM.ul(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["tickets"], null)], null), attrs22195)), null);
       } else {
-        return React.DOM.ul({"className":"tickets"}, sablono.interpreter.interpret.call(null, attrs18296));
+        return React.DOM.ul({"className":"tickets"}, sablono.interpreter.interpret.call(null, attrs22195));
       }
     };
-    parenticket.core.t18293.prototype.cljs$core$IMeta$_meta$arity$1 = function(_18295) {
+    parenticket.core.t22192.prototype.cljs$core$IMeta$_meta$arity$1 = function(_22194) {
       var self__ = this;
-      var _18295__$1 = this;
-      return self__.meta18294;
+      var _22194__$1 = this;
+      return self__.meta22193;
     };
-    parenticket.core.t18293.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(_18295, meta18294__$1) {
+    parenticket.core.t22192.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(_22194, meta22193__$1) {
       var self__ = this;
-      var _18295__$1 = this;
-      return new parenticket.core.t18293(self__.opts, self__.owner, self__.tickets, self__.ticket_column, meta18294__$1);
+      var _22194__$1 = this;
+      return new parenticket.core.t22192(self__.opts, self__.owner, self__.tickets, self__.ticket_column, meta22193__$1);
     };
-    parenticket.core.__GT_t18293 = function __GT_t18293(opts__$1, owner__$1, tickets__$1, ticket_column__$1, meta18294) {
-      return new parenticket.core.t18293(opts__$1, owner__$1, tickets__$1, ticket_column__$1, meta18294);
+    parenticket.core.__GT_t22192 = function __GT_t22192(opts__$1, owner__$1, tickets__$1, ticket_column__$1, meta22193) {
+      return new parenticket.core.t22192(opts__$1, owner__$1, tickets__$1, ticket_column__$1, meta22193);
     };
   }
-  return new parenticket.core.t18293(opts, owner, tickets, ticket_column, null);
+  return new parenticket.core.t22192(opts, owner, tickets, ticket_column, null);
 };
 parenticket.core.handle_new_project_BANG_ = function handle_new_project_BANG_(state, owner) {
   var temp__4126__auto__ = prompt("Project Name?");
@@ -56121,55 +56121,55 @@ parenticket.core.handle_new_project_BANG_ = function handle_new_project_BANG_(st
       return function() {
         var f__8456__auto__ = function() {
           var switch__8440__auto__ = function(c__8455__auto__, name, temp__4126__auto__) {
-            return function(state_18339) {
-              var state_val_18340 = state_18339[1];
-              if (state_val_18340 === 5) {
-                var inst_18337 = state_18339[2];
-                var state_18339__$1 = state_18339;
-                return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_18339__$1, inst_18337);
+            return function(state_22238) {
+              var state_val_22239 = state_22238[1];
+              if (state_val_22239 === 5) {
+                var inst_22236 = state_22238[2];
+                var state_22238__$1 = state_22238;
+                return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_22238__$1, inst_22236);
               } else {
-                if (state_val_18340 === 4) {
-                  var state_18339__$1 = state_18339;
-                  var statearr_18341_18353 = state_18339__$1;
-                  statearr_18341_18353[2] = null;
-                  statearr_18341_18353[1] = 5;
+                if (state_val_22239 === 4) {
+                  var state_22238__$1 = state_22238;
+                  var statearr_22240_22252 = state_22238__$1;
+                  statearr_22240_22252[2] = null;
+                  statearr_22240_22252[1] = 5;
                   return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                 } else {
-                  if (state_val_18340 === 3) {
-                    var inst_18327 = state_18339[7];
-                    var inst_18329 = [new cljs.core.Keyword(null, "project", "project", 1124394579)];
-                    var inst_18330 = (new cljs.core.Keyword(null, "id", "id", -1388402092)).cljs$core$IFn$_invoke$arity$1(inst_18327);
-                    var inst_18331 = [inst_18330];
-                    var inst_18332 = cljs.core.PersistentHashMap.fromArrays.call(null, inst_18329, inst_18331);
-                    var inst_18333 = parenticket.navigation.project_route.call(null, inst_18332);
-                    var inst_18334 = parenticket.navigation.navigate_BANG_.call(null, inst_18333);
-                    var state_18339__$1 = state_18339;
-                    var statearr_18342_18354 = state_18339__$1;
-                    statearr_18342_18354[2] = inst_18334;
-                    statearr_18342_18354[1] = 5;
+                  if (state_val_22239 === 3) {
+                    var inst_22226 = state_22238[7];
+                    var inst_22228 = [new cljs.core.Keyword(null, "project", "project", 1124394579)];
+                    var inst_22229 = (new cljs.core.Keyword(null, "id", "id", -1388402092)).cljs$core$IFn$_invoke$arity$1(inst_22226);
+                    var inst_22230 = [inst_22229];
+                    var inst_22231 = cljs.core.PersistentHashMap.fromArrays.call(null, inst_22228, inst_22230);
+                    var inst_22232 = parenticket.navigation.project_route.call(null, inst_22231);
+                    var inst_22233 = parenticket.navigation.navigate_BANG_.call(null, inst_22232);
+                    var state_22238__$1 = state_22238;
+                    var statearr_22241_22253 = state_22238__$1;
+                    statearr_22241_22253[2] = inst_22233;
+                    statearr_22241_22253[1] = 5;
                     return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                   } else {
-                    if (state_val_18340 === 2) {
-                      var inst_18327 = state_18339[7];
-                      var inst_18327__$1 = state_18339[2];
-                      var state_18339__$1 = function() {
-                        var statearr_18343 = state_18339;
-                        statearr_18343[7] = inst_18327__$1;
-                        return statearr_18343;
+                    if (state_val_22239 === 2) {
+                      var inst_22226 = state_22238[7];
+                      var inst_22226__$1 = state_22238[2];
+                      var state_22238__$1 = function() {
+                        var statearr_22242 = state_22238;
+                        statearr_22242[7] = inst_22226__$1;
+                        return statearr_22242;
                       }();
-                      if (cljs.core.truth_(inst_18327__$1)) {
-                        var statearr_18344_18355 = state_18339__$1;
-                        statearr_18344_18355[1] = 3;
+                      if (cljs.core.truth_(inst_22226__$1)) {
+                        var statearr_22243_22254 = state_22238__$1;
+                        statearr_22243_22254[1] = 3;
                       } else {
-                        var statearr_18345_18356 = state_18339__$1;
-                        statearr_18345_18356[1] = 4;
+                        var statearr_22244_22255 = state_22238__$1;
+                        statearr_22244_22255[1] = 4;
                       }
                       return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                     } else {
-                      if (state_val_18340 === 1) {
-                        var inst_18325 = parenticket.api.add_project_BANG_.call(null, parenticket.core.adapter, name);
-                        var state_18339__$1 = state_18339;
-                        return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_18339__$1, 2, inst_18325);
+                      if (state_val_22239 === 1) {
+                        var inst_22224 = parenticket.api.add_project_BANG_.call(null, parenticket.core.adapter, name);
+                        var state_22238__$1 = state_22238;
+                        return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_22238__$1, 2, inst_22224);
                       } else {
                         return null;
                       }
@@ -56183,17 +56183,17 @@ parenticket.core.handle_new_project_BANG_ = function handle_new_project_BANG_(st
             return function() {
               var state_machine__8441__auto__ = null;
               var state_machine__8441__auto____0 = function() {
-                var statearr_18349 = [null, null, null, null, null, null, null, null];
-                statearr_18349[0] = state_machine__8441__auto__;
-                statearr_18349[1] = 1;
-                return statearr_18349;
+                var statearr_22248 = [null, null, null, null, null, null, null, null];
+                statearr_22248[0] = state_machine__8441__auto__;
+                statearr_22248[1] = 1;
+                return statearr_22248;
               };
-              var state_machine__8441__auto____1 = function(state_18339) {
+              var state_machine__8441__auto____1 = function(state_22238) {
                 while (true) {
                   var ret_value__8442__auto__ = function() {
                     try {
                       while (true) {
-                        var result__8443__auto__ = switch__8440__auto__.call(null, state_18339);
+                        var result__8443__auto__ = switch__8440__auto__.call(null, state_22238);
                         if (cljs.core.keyword_identical_QMARK_.call(null, result__8443__auto__, new cljs.core.Keyword(null, "recur", "recur", -437573268))) {
                           continue;
                         } else {
@@ -56201,16 +56201,16 @@ parenticket.core.handle_new_project_BANG_ = function handle_new_project_BANG_(st
                         }
                         break;
                       }
-                    } catch (e18350) {
-                      if (e18350 instanceof Object) {
-                        var ex__8444__auto__ = e18350;
-                        var statearr_18351_18357 = state_18339;
-                        statearr_18351_18357[5] = ex__8444__auto__;
-                        cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_18339);
+                    } catch (e22249) {
+                      if (e22249 instanceof Object) {
+                        var ex__8444__auto__ = e22249;
+                        var statearr_22250_22256 = state_22238;
+                        statearr_22250_22256[5] = ex__8444__auto__;
+                        cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_22238);
                         return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                       } else {
                         if (new cljs.core.Keyword(null, "else", "else", -1508377146)) {
-                          throw e18350;
+                          throw e22249;
                         } else {
                           return null;
                         }
@@ -56218,8 +56218,8 @@ parenticket.core.handle_new_project_BANG_ = function handle_new_project_BANG_(st
                     }
                   }();
                   if (cljs.core.keyword_identical_QMARK_.call(null, ret_value__8442__auto__, new cljs.core.Keyword(null, "recur", "recur", -437573268))) {
-                    var G__18358 = state_18339;
-                    state_18339 = G__18358;
+                    var G__22257 = state_22238;
+                    state_22238 = G__22257;
                     continue;
                   } else {
                     return ret_value__8442__auto__;
@@ -56227,12 +56227,12 @@ parenticket.core.handle_new_project_BANG_ = function handle_new_project_BANG_(st
                   break;
                 }
               };
-              state_machine__8441__auto__ = function(state_18339) {
+              state_machine__8441__auto__ = function(state_22238) {
                 switch(arguments.length) {
                   case 0:
                     return state_machine__8441__auto____0.call(this);
                   case 1:
-                    return state_machine__8441__auto____1.call(this, state_18339);
+                    return state_machine__8441__auto____1.call(this, state_22238);
                 }
                 throw new Error("Invalid arity: " + arguments.length);
               };
@@ -56243,9 +56243,9 @@ parenticket.core.handle_new_project_BANG_ = function handle_new_project_BANG_(st
           }(switch__8440__auto__, c__8455__auto__, name, temp__4126__auto__);
         }();
         var state__8457__auto__ = function() {
-          var statearr_18352 = f__8456__auto__.call(null);
-          statearr_18352[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__8455__auto__;
-          return statearr_18352;
+          var statearr_22251 = f__8456__auto__.call(null);
+          statearr_22251[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__8455__auto__;
+          return statearr_22251;
         }();
         return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, state__8457__auto__);
       };
@@ -56256,71 +56256,71 @@ parenticket.core.handle_new_project_BANG_ = function handle_new_project_BANG_(st
   }
 };
 parenticket.core.project_column = function project_column(state, owner, opts) {
-  if (typeof parenticket.core.t18379 !== "undefined") {
+  if (typeof parenticket.core.t22278 !== "undefined") {
   } else {
-    parenticket.core.t18379 = function(opts, owner, state, project_column, meta18380) {
+    parenticket.core.t22278 = function(opts, owner, state, project_column, meta22279) {
       this.opts = opts;
       this.owner = owner;
       this.state = state;
       this.project_column = project_column;
-      this.meta18380 = meta18380;
+      this.meta22279 = meta22279;
       this.cljs$lang$protocol_mask$partition1$ = 0;
       this.cljs$lang$protocol_mask$partition0$ = 393216;
     };
-    parenticket.core.t18379.cljs$lang$type = true;
-    parenticket.core.t18379.cljs$lang$ctorStr = "parenticket.core/t18379";
-    parenticket.core.t18379.cljs$lang$ctorPrWriter = function(this__5595__auto__, writer__5596__auto__, opt__5597__auto__) {
-      return cljs.core._write.call(null, writer__5596__auto__, "parenticket.core/t18379");
+    parenticket.core.t22278.cljs$lang$type = true;
+    parenticket.core.t22278.cljs$lang$ctorStr = "parenticket.core/t22278";
+    parenticket.core.t22278.cljs$lang$ctorPrWriter = function(this__5595__auto__, writer__5596__auto__, opt__5597__auto__) {
+      return cljs.core._write.call(null, writer__5596__auto__, "parenticket.core/t22278");
     };
-    parenticket.core.t18379.prototype.om$core$IRenderState$ = true;
-    parenticket.core.t18379.prototype.om$core$IRenderState$render_state$arity$2 = function(_, p__18382) {
+    parenticket.core.t22278.prototype.om$core$IRenderState$ = true;
+    parenticket.core.t22278.prototype.om$core$IRenderState$render_state$arity$2 = function(_, p__22281) {
       var self__ = this;
-      var map__18383 = p__18382;
-      var map__18383__$1 = cljs.core.seq_QMARK_.call(null, map__18383) ? cljs.core.apply.call(null, cljs.core.hash_map, map__18383) : map__18383;
-      var search = cljs.core.get.call(null, map__18383__$1, new cljs.core.Keyword(null, "search", "search", 1564939822));
+      var map__22282 = p__22281;
+      var map__22282__$1 = cljs.core.seq_QMARK_.call(null, map__22282) ? cljs.core.apply.call(null, cljs.core.hash_map, map__22282) : map__22282;
+      var search = cljs.core.get.call(null, map__22282__$1, new cljs.core.Keyword(null, "search", "search", 1564939822));
       var ___$1 = this;
       return React.DOM.div({"className":"pane project"}, React.DOM.h1(null, "Parenticket"), function() {
-        var attrs18386 = cljs.core.get_in.call(null, self__.state, new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "projects", "projects", -364845983), (new cljs.core.Keyword(null, "current-project", "current-project", 903630396)).cljs$core$IFn$_invoke$arity$1(self__.state), new cljs.core.Keyword(null, "name", "name", 1843675177)], null));
-        if (cljs.core.map_QMARK_.call(null, attrs18386)) {
-          return React.DOM.h2(sablono.interpreter.attributes.call(null, attrs18386), null);
+        var attrs22285 = cljs.core.get_in.call(null, self__.state, new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "projects", "projects", -364845983), (new cljs.core.Keyword(null, "current-project", "current-project", 903630396)).cljs$core$IFn$_invoke$arity$1(self__.state), new cljs.core.Keyword(null, "name", "name", 1843675177)], null));
+        if (cljs.core.map_QMARK_.call(null, attrs22285)) {
+          return React.DOM.h2(sablono.interpreter.attributes.call(null, attrs22285), null);
         } else {
-          return React.DOM.h2(null, sablono.interpreter.interpret.call(null, attrs18386));
+          return React.DOM.h2(null, sablono.interpreter.interpret.call(null, attrs22285));
         }
-      }(), React.DOM.ul({"className":"actions"}, React.DOM.li(null, React.DOM.a({"className":"new-project", "href":"#", "onClick":function(___$1, map__18383, map__18383__$1, search) {
+      }(), React.DOM.ul({"className":"actions"}, React.DOM.li(null, React.DOM.a({"className":"new-project", "href":"#", "onClick":function(___$1, map__22282, map__22282__$1, search) {
         return function(___$2) {
           parenticket.core.handle_new_project_BANG_.call(null, self__.state, self__.owner);
           return false;
         };
-      }(___$1, map__18383, map__18383__$1, search)}, "New Project")), React.DOM.li(null, React.DOM.a({"className":"new-ticket", "href":parenticket.navigation.new_ticket_route.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "project", "project", 1124394579), (new cljs.core.Keyword(null, "current-project", "current-project", 903630396)).cljs$core$IFn$_invoke$arity$1(self__.state)], null))}, "New Ticket"))), React.DOM.form({"className":"filter"}, React.DOM.h4(null, 
-      "Filter"), sablono.interpreter.input.call(null, {"className":"tagfilter", "type":"text", "value":search, "onChange":function(___$1, map__18383, map__18383__$1, search) {
+      }(___$1, map__22282, map__22282__$1, search)}, "New Project")), React.DOM.li(null, React.DOM.a({"className":"new-ticket", "href":parenticket.navigation.new_ticket_route.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "project", "project", 1124394579), (new cljs.core.Keyword(null, "current-project", "current-project", 903630396)).cljs$core$IFn$_invoke$arity$1(self__.state)], null))}, "New Ticket"))), React.DOM.form({"className":"filter"}, React.DOM.h4(null, 
+      "Filter"), sablono.interpreter.input.call(null, {"className":"tagfilter", "type":"text", "value":search, "onChange":function(___$1, map__22282, map__22282__$1, search) {
         return function(e) {
           cljs.core.async.put_BANG_.call(null, (new cljs.core.Keyword(null, "filter-chan", "filter-chan", -319950203)).cljs$core$IFn$_invoke$arity$1(self__.opts), e.target.value);
           return false;
         };
-      }(___$1, map__18383, map__18383__$1, search)})), React.DOM.h3(null, "Projects"), React.DOM.ul({"className":"projects"}, cljs.core.into_array.call(null, function() {
-        var iter__5753__auto__ = function(___$1, map__18383, map__18383__$1, search) {
-          return function iter__18391(s__18392) {
-            return new cljs.core.LazySeq(null, function(___$1, map__18383, map__18383__$1, search) {
+      }(___$1, map__22282, map__22282__$1, search)})), React.DOM.h3(null, "Projects"), React.DOM.ul({"className":"projects"}, cljs.core.into_array.call(null, function() {
+        var iter__5753__auto__ = function(___$1, map__22282, map__22282__$1, search) {
+          return function iter__22290(s__22291) {
+            return new cljs.core.LazySeq(null, function(___$1, map__22282, map__22282__$1, search) {
               return function() {
-                var s__18392__$1 = s__18392;
+                var s__22291__$1 = s__22291;
                 while (true) {
-                  var temp__4126__auto__ = cljs.core.seq.call(null, s__18392__$1);
+                  var temp__4126__auto__ = cljs.core.seq.call(null, s__22291__$1);
                   if (temp__4126__auto__) {
-                    var s__18392__$2 = temp__4126__auto__;
-                    if (cljs.core.chunked_seq_QMARK_.call(null, s__18392__$2)) {
-                      var c__5751__auto__ = cljs.core.chunk_first.call(null, s__18392__$2);
+                    var s__22291__$2 = temp__4126__auto__;
+                    if (cljs.core.chunked_seq_QMARK_.call(null, s__22291__$2)) {
+                      var c__5751__auto__ = cljs.core.chunk_first.call(null, s__22291__$2);
                       var size__5752__auto__ = cljs.core.count.call(null, c__5751__auto__);
-                      var b__18394 = cljs.core.chunk_buffer.call(null, size__5752__auto__);
+                      var b__22293 = cljs.core.chunk_buffer.call(null, size__5752__auto__);
                       if (function() {
-                        var i__18393 = 0;
+                        var i__22292 = 0;
                         while (true) {
-                          if (i__18393 < size__5752__auto__) {
-                            var vec__18397 = cljs.core._nth.call(null, c__5751__auto__, i__18393);
-                            var id = cljs.core.nth.call(null, vec__18397, 0, null);
-                            var project = cljs.core.nth.call(null, vec__18397, 1, null);
-                            cljs.core.chunk_append.call(null, b__18394, React.DOM.li({"className":"project"}, React.DOM.a({"href":"#/project/" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(id)}, sablono.interpreter.interpret.call(null, (new cljs.core.Keyword(null, "name", "name", 1843675177)).cljs$core$IFn$_invoke$arity$1(project)))));
-                            var G__18399 = i__18393 + 1;
-                            i__18393 = G__18399;
+                          if (i__22292 < size__5752__auto__) {
+                            var vec__22296 = cljs.core._nth.call(null, c__5751__auto__, i__22292);
+                            var id = cljs.core.nth.call(null, vec__22296, 0, null);
+                            var project = cljs.core.nth.call(null, vec__22296, 1, null);
+                            cljs.core.chunk_append.call(null, b__22293, React.DOM.li({"className":"project"}, React.DOM.a({"href":"#/project/" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(id)}, sablono.interpreter.interpret.call(null, (new cljs.core.Keyword(null, "name", "name", 1843675177)).cljs$core$IFn$_invoke$arity$1(project)))));
+                            var G__22298 = i__22292 + 1;
+                            i__22292 = G__22298;
                             continue;
                           } else {
                             return true;
@@ -56328,15 +56328,15 @@ parenticket.core.project_column = function project_column(state, owner, opts) {
                           break;
                         }
                       }()) {
-                        return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__18394), iter__18391.call(null, cljs.core.chunk_rest.call(null, s__18392__$2)));
+                        return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__22293), iter__22290.call(null, cljs.core.chunk_rest.call(null, s__22291__$2)));
                       } else {
-                        return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__18394), null);
+                        return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__22293), null);
                       }
                     } else {
-                      var vec__18398 = cljs.core.first.call(null, s__18392__$2);
-                      var id = cljs.core.nth.call(null, vec__18398, 0, null);
-                      var project = cljs.core.nth.call(null, vec__18398, 1, null);
-                      return cljs.core.cons.call(null, React.DOM.li({"className":"project"}, React.DOM.a({"href":"#/project/" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(id)}, sablono.interpreter.interpret.call(null, (new cljs.core.Keyword(null, "name", "name", 1843675177)).cljs$core$IFn$_invoke$arity$1(project)))), iter__18391.call(null, cljs.core.rest.call(null, s__18392__$2)));
+                      var vec__22297 = cljs.core.first.call(null, s__22291__$2);
+                      var id = cljs.core.nth.call(null, vec__22297, 0, null);
+                      var project = cljs.core.nth.call(null, vec__22297, 1, null);
+                      return cljs.core.cons.call(null, React.DOM.li({"className":"project"}, React.DOM.a({"href":"#/project/" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(id)}, sablono.interpreter.interpret.call(null, (new cljs.core.Keyword(null, "name", "name", 1843675177)).cljs$core$IFn$_invoke$arity$1(project)))), iter__22290.call(null, cljs.core.rest.call(null, s__22291__$2)));
                     }
                   } else {
                     return null;
@@ -56344,47 +56344,47 @@ parenticket.core.project_column = function project_column(state, owner, opts) {
                   break;
                 }
               };
-            }(___$1, map__18383, map__18383__$1, search), null, null);
+            }(___$1, map__22282, map__22282__$1, search), null, null);
           };
-        }(___$1, map__18383, map__18383__$1, search);
+        }(___$1, map__22282, map__22282__$1, search);
         return iter__5753__auto__.call(null, (new cljs.core.Keyword(null, "projects", "projects", -364845983)).cljs$core$IFn$_invoke$arity$1(self__.state));
       }())));
     };
-    parenticket.core.t18379.prototype.cljs$core$IMeta$_meta$arity$1 = function(_18381) {
+    parenticket.core.t22278.prototype.cljs$core$IMeta$_meta$arity$1 = function(_22280) {
       var self__ = this;
-      var _18381__$1 = this;
-      return self__.meta18380;
+      var _22280__$1 = this;
+      return self__.meta22279;
     };
-    parenticket.core.t18379.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(_18381, meta18380__$1) {
+    parenticket.core.t22278.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(_22280, meta22279__$1) {
       var self__ = this;
-      var _18381__$1 = this;
-      return new parenticket.core.t18379(self__.opts, self__.owner, self__.state, self__.project_column, meta18380__$1);
+      var _22280__$1 = this;
+      return new parenticket.core.t22278(self__.opts, self__.owner, self__.state, self__.project_column, meta22279__$1);
     };
-    parenticket.core.__GT_t18379 = function __GT_t18379(opts__$1, owner__$1, state__$1, project_column__$1, meta18380) {
-      return new parenticket.core.t18379(opts__$1, owner__$1, state__$1, project_column__$1, meta18380);
+    parenticket.core.__GT_t22278 = function __GT_t22278(opts__$1, owner__$1, state__$1, project_column__$1, meta22279) {
+      return new parenticket.core.t22278(opts__$1, owner__$1, state__$1, project_column__$1, meta22279);
     };
   }
-  return new parenticket.core.t18379(opts, owner, state, project_column, null);
+  return new parenticket.core.t22278(opts, owner, state, project_column, null);
 };
 parenticket.core.ticket_view = function ticket_view(ticket, owner, opts) {
-  if (typeof parenticket.core.t18410 !== "undefined") {
+  if (typeof parenticket.core.t22309 !== "undefined") {
   } else {
-    parenticket.core.t18410 = function(opts, owner, ticket, ticket_view, meta18411) {
+    parenticket.core.t22309 = function(opts, owner, ticket, ticket_view, meta22310) {
       this.opts = opts;
       this.owner = owner;
       this.ticket = ticket;
       this.ticket_view = ticket_view;
-      this.meta18411 = meta18411;
+      this.meta22310 = meta22310;
       this.cljs$lang$protocol_mask$partition1$ = 0;
       this.cljs$lang$protocol_mask$partition0$ = 393216;
     };
-    parenticket.core.t18410.cljs$lang$type = true;
-    parenticket.core.t18410.cljs$lang$ctorStr = "parenticket.core/t18410";
-    parenticket.core.t18410.cljs$lang$ctorPrWriter = function(this__5595__auto__, writer__5596__auto__, opt__5597__auto__) {
-      return cljs.core._write.call(null, writer__5596__auto__, "parenticket.core/t18410");
+    parenticket.core.t22309.cljs$lang$type = true;
+    parenticket.core.t22309.cljs$lang$ctorStr = "parenticket.core/t22309";
+    parenticket.core.t22309.cljs$lang$ctorPrWriter = function(this__5595__auto__, writer__5596__auto__, opt__5597__auto__) {
+      return cljs.core._write.call(null, writer__5596__auto__, "parenticket.core/t22309");
     };
-    parenticket.core.t18410.prototype.om$core$IRender$ = true;
-    parenticket.core.t18410.prototype.om$core$IRender$render$arity$1 = function(this__7210__auto__) {
+    parenticket.core.t22309.prototype.om$core$IRender$ = true;
+    parenticket.core.t22309.prototype.om$core$IRender$render$arity$1 = function(this__7210__auto__) {
       var self__ = this;
       var this__7210__auto____$1 = this;
       return React.DOM.div({"className":"dialog ticket"}, React.DOM.div({"className":"close", "onClick":function(this__7210__auto____$1) {
@@ -56396,149 +56396,149 @@ parenticket.core.ticket_view = function ticket_view(ticket, owner, opts) {
           return false;
         };
       }(this__7210__auto____$1)}, "X"), React.DOM.h3(null, "Ticket"), React.DOM.label({"className":"name"}, "Name", function() {
-        var attrs18415 = (new cljs.core.Keyword(null, "name", "name", 1843675177)).cljs$core$IFn$_invoke$arity$1(self__.ticket);
-        if (cljs.core.map_QMARK_.call(null, attrs18415)) {
-          return React.DOM.span(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["name"], null)], null), attrs18415)), null);
+        var attrs22314 = (new cljs.core.Keyword(null, "name", "name", 1843675177)).cljs$core$IFn$_invoke$arity$1(self__.ticket);
+        if (cljs.core.map_QMARK_.call(null, attrs22314)) {
+          return React.DOM.span(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["name"], null)], null), attrs22314)), null);
         } else {
-          return React.DOM.span({"className":"name"}, sablono.interpreter.interpret.call(null, attrs18415));
+          return React.DOM.span({"className":"name"}, sablono.interpreter.interpret.call(null, attrs22314));
         }
       }()), React.DOM.label({"className":"description"}, "Description", function() {
-        var attrs18416 = (new cljs.core.Keyword(null, "description", "description", -1428560544)).cljs$core$IFn$_invoke$arity$1(self__.ticket);
-        if (cljs.core.map_QMARK_.call(null, attrs18416)) {
-          return React.DOM.span(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["description"], null)], null), attrs18416)), null);
+        var attrs22315 = (new cljs.core.Keyword(null, "description", "description", -1428560544)).cljs$core$IFn$_invoke$arity$1(self__.ticket);
+        if (cljs.core.map_QMARK_.call(null, attrs22315)) {
+          return React.DOM.span(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["description"], null)], null), attrs22315)), null);
         } else {
-          return React.DOM.span({"className":"description"}, sablono.interpreter.interpret.call(null, attrs18416));
+          return React.DOM.span({"className":"description"}, sablono.interpreter.interpret.call(null, attrs22315));
         }
       }()), React.DOM.label({"className":"tags"}, "Tags", function() {
-        var attrs18417 = clojure.string.join.call(null, ", ", (new cljs.core.Keyword(null, "tags", "tags", 1771418977)).cljs$core$IFn$_invoke$arity$1(self__.ticket));
-        if (cljs.core.map_QMARK_.call(null, attrs18417)) {
-          return React.DOM.span(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["tags"], null)], null), attrs18417)), null);
+        var attrs22316 = clojure.string.join.call(null, ", ", (new cljs.core.Keyword(null, "tags", "tags", 1771418977)).cljs$core$IFn$_invoke$arity$1(self__.ticket));
+        if (cljs.core.map_QMARK_.call(null, attrs22316)) {
+          return React.DOM.span(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["tags"], null)], null), attrs22316)), null);
         } else {
-          return React.DOM.span({"className":"tags"}, sablono.interpreter.interpret.call(null, attrs18417));
+          return React.DOM.span({"className":"tags"}, sablono.interpreter.interpret.call(null, attrs22316));
         }
       }()), React.DOM.label({"className":"deadline"}, "Deadline", function() {
-        var attrs18418 = (new cljs.core.Keyword(null, "deadline", "deadline", 628964572)).cljs$core$IFn$_invoke$arity$1(self__.ticket);
-        if (cljs.core.map_QMARK_.call(null, attrs18418)) {
-          return React.DOM.span(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["deadline"], null)], null), attrs18418)), null);
+        var attrs22317 = (new cljs.core.Keyword(null, "deadline", "deadline", 628964572)).cljs$core$IFn$_invoke$arity$1(self__.ticket);
+        if (cljs.core.map_QMARK_.call(null, attrs22317)) {
+          return React.DOM.span(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["deadline"], null)], null), attrs22317)), null);
         } else {
-          return React.DOM.span({"className":"deadline"}, sablono.interpreter.interpret.call(null, attrs18418));
+          return React.DOM.span({"className":"deadline"}, sablono.interpreter.interpret.call(null, attrs22317));
         }
       }()), React.DOM.label({"className":"priority"}, "Priority", function() {
-        var attrs18419 = (new cljs.core.Keyword(null, "projects", "projects", -364845983)).cljs$core$IFn$_invoke$arity$1(self__.ticket);
-        if (cljs.core.map_QMARK_.call(null, attrs18419)) {
-          return React.DOM.span(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["priority"], null)], null), attrs18419)), null);
+        var attrs22318 = (new cljs.core.Keyword(null, "projects", "projects", -364845983)).cljs$core$IFn$_invoke$arity$1(self__.ticket);
+        if (cljs.core.map_QMARK_.call(null, attrs22318)) {
+          return React.DOM.span(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["priority"], null)], null), attrs22318)), null);
         } else {
-          return React.DOM.span({"className":"priority"}, sablono.interpreter.interpret.call(null, attrs18419));
+          return React.DOM.span({"className":"priority"}, sablono.interpreter.interpret.call(null, attrs22318));
         }
       }()));
     };
-    parenticket.core.t18410.prototype.cljs$core$IMeta$_meta$arity$1 = function(_18412) {
+    parenticket.core.t22309.prototype.cljs$core$IMeta$_meta$arity$1 = function(_22311) {
       var self__ = this;
-      var _18412__$1 = this;
-      return self__.meta18411;
+      var _22311__$1 = this;
+      return self__.meta22310;
     };
-    parenticket.core.t18410.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(_18412, meta18411__$1) {
+    parenticket.core.t22309.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(_22311, meta22310__$1) {
       var self__ = this;
-      var _18412__$1 = this;
-      return new parenticket.core.t18410(self__.opts, self__.owner, self__.ticket, self__.ticket_view, meta18411__$1);
+      var _22311__$1 = this;
+      return new parenticket.core.t22309(self__.opts, self__.owner, self__.ticket, self__.ticket_view, meta22310__$1);
     };
-    parenticket.core.__GT_t18410 = function __GT_t18410(opts__$1, owner__$1, ticket__$1, ticket_view__$1, meta18411) {
-      return new parenticket.core.t18410(opts__$1, owner__$1, ticket__$1, ticket_view__$1, meta18411);
+    parenticket.core.__GT_t22309 = function __GT_t22309(opts__$1, owner__$1, ticket__$1, ticket_view__$1, meta22310) {
+      return new parenticket.core.t22309(opts__$1, owner__$1, ticket__$1, ticket_view__$1, meta22310);
     };
   }
-  return new parenticket.core.t18410(opts, owner, ticket, ticket_view, null);
+  return new parenticket.core.t22309(opts, owner, ticket, ticket_view, null);
 };
 parenticket.core.handle_edit_BANG_ = function handle_edit_BANG_(project_id, ticket_id, owner) {
   var ticket = om.core.get_state.call(null, owner);
-  var map__18460 = ticket;
-  var map__18460__$1 = cljs.core.seq_QMARK_.call(null, map__18460) ? cljs.core.apply.call(null, cljs.core.hash_map, map__18460) : map__18460;
-  var status = cljs.core.get.call(null, map__18460__$1, new cljs.core.Keyword(null, "status", "status", -1997798413));
-  var priority = cljs.core.get.call(null, map__18460__$1, new cljs.core.Keyword(null, "priority", "priority", 1431093715));
-  var tags = cljs.core.get.call(null, map__18460__$1, new cljs.core.Keyword(null, "tags", "tags", 1771418977));
-  var description = cljs.core.get.call(null, map__18460__$1, new cljs.core.Keyword(null, "description", "description", -1428560544));
-  var name = cljs.core.get.call(null, map__18460__$1, new cljs.core.Keyword(null, "name", "name", 1843675177));
+  var map__22359 = ticket;
+  var map__22359__$1 = cljs.core.seq_QMARK_.call(null, map__22359) ? cljs.core.apply.call(null, cljs.core.hash_map, map__22359) : map__22359;
+  var status = cljs.core.get.call(null, map__22359__$1, new cljs.core.Keyword(null, "status", "status", -1997798413));
+  var priority = cljs.core.get.call(null, map__22359__$1, new cljs.core.Keyword(null, "priority", "priority", 1431093715));
+  var tags = cljs.core.get.call(null, map__22359__$1, new cljs.core.Keyword(null, "tags", "tags", 1771418977));
+  var description = cljs.core.get.call(null, map__22359__$1, new cljs.core.Keyword(null, "description", "description", -1428560544));
+  var name = cljs.core.get.call(null, map__22359__$1, new cljs.core.Keyword(null, "name", "name", 1843675177));
   var tags__$1 = cljs.core.map.call(null, clojure.string.trim, tags);
   cljs.core.prn.call(null, om.core.get_state.call(null, owner));
   if (typeof name === "string") {
     var c__8455__auto__ = cljs.core.async.chan.call(null, 1);
-    cljs.core.async.impl.dispatch.run.call(null, function(c__8455__auto__, ticket, map__18460, map__18460__$1, status, priority, tags, description, name, tags__$1) {
+    cljs.core.async.impl.dispatch.run.call(null, function(c__8455__auto__, ticket, map__22359, map__22359__$1, status, priority, tags, description, name, tags__$1) {
       return function() {
         var f__8456__auto__ = function() {
-          var switch__8440__auto__ = function(c__8455__auto__, ticket, map__18460, map__18460__$1, status, priority, tags, description, name, tags__$1) {
-            return function(state_18482) {
-              var state_val_18483 = state_18482[1];
-              if (state_val_18483 === 8) {
-                var inst_18480 = state_18482[2];
-                var state_18482__$1 = state_18482;
-                return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_18482__$1, inst_18480);
+          var switch__8440__auto__ = function(c__8455__auto__, ticket, map__22359, map__22359__$1, status, priority, tags, description, name, tags__$1) {
+            return function(state_22381) {
+              var state_val_22382 = state_22381[1];
+              if (state_val_22382 === 8) {
+                var inst_22379 = state_22381[2];
+                var state_22381__$1 = state_22381;
+                return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_22381__$1, inst_22379);
               } else {
-                if (state_val_18483 === 7) {
-                  var state_18482__$1 = state_18482;
-                  var statearr_18484_18500 = state_18482__$1;
-                  statearr_18484_18500[2] = null;
-                  statearr_18484_18500[1] = 8;
+                if (state_val_22382 === 7) {
+                  var state_22381__$1 = state_22381;
+                  var statearr_22383_22399 = state_22381__$1;
+                  statearr_22383_22399[2] = null;
+                  statearr_22383_22399[1] = 8;
                   return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                 } else {
-                  if (state_val_18483 === 6) {
-                    var inst_18473 = [new cljs.core.Keyword(null, "project", "project", 1124394579)];
-                    var inst_18474 = [project_id];
-                    var inst_18475 = cljs.core.PersistentHashMap.fromArrays.call(null, inst_18473, inst_18474);
-                    var inst_18476 = parenticket.navigation.project_route.call(null, inst_18475);
-                    var inst_18477 = parenticket.navigation.navigate_BANG_.call(null, inst_18476);
-                    var state_18482__$1 = state_18482;
-                    var statearr_18485_18501 = state_18482__$1;
-                    statearr_18485_18501[2] = inst_18477;
-                    statearr_18485_18501[1] = 8;
+                  if (state_val_22382 === 6) {
+                    var inst_22372 = [new cljs.core.Keyword(null, "project", "project", 1124394579)];
+                    var inst_22373 = [project_id];
+                    var inst_22374 = cljs.core.PersistentHashMap.fromArrays.call(null, inst_22372, inst_22373);
+                    var inst_22375 = parenticket.navigation.project_route.call(null, inst_22374);
+                    var inst_22376 = parenticket.navigation.navigate_BANG_.call(null, inst_22375);
+                    var state_22381__$1 = state_22381;
+                    var statearr_22384_22400 = state_22381__$1;
+                    statearr_22384_22400[2] = inst_22376;
+                    statearr_22384_22400[1] = 8;
                     return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                   } else {
-                    if (state_val_18483 === 5) {
-                      var inst_18469 = state_18482[2];
-                      var state_18482__$1 = state_18482;
-                      return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_18482__$1, 2, inst_18469);
+                    if (state_val_22382 === 5) {
+                      var inst_22368 = state_22381[2];
+                      var state_22381__$1 = state_22381;
+                      return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_22381__$1, 2, inst_22368);
                     } else {
-                      if (state_val_18483 === 4) {
-                        var inst_18466 = cljs.core.dissoc.call(null, ticket, new cljs.core.Keyword(null, "project_id", "project_id", 1147160698));
-                        var inst_18467 = parenticket.api.add_ticket_BANG_.call(null, parenticket.core.adapter, project_id, inst_18466);
-                        var state_18482__$1 = state_18482;
-                        var statearr_18486_18502 = state_18482__$1;
-                        statearr_18486_18502[2] = inst_18467;
-                        statearr_18486_18502[1] = 5;
+                      if (state_val_22382 === 4) {
+                        var inst_22365 = cljs.core.dissoc.call(null, ticket, new cljs.core.Keyword(null, "project_id", "project_id", 1147160698));
+                        var inst_22366 = parenticket.api.add_ticket_BANG_.call(null, parenticket.core.adapter, project_id, inst_22365);
+                        var state_22381__$1 = state_22381;
+                        var statearr_22385_22401 = state_22381__$1;
+                        statearr_22385_22401[2] = inst_22366;
+                        statearr_22385_22401[1] = 5;
                         return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                       } else {
-                        if (state_val_18483 === 3) {
-                          var inst_18463 = cljs.core.assoc.call(null, ticket, new cljs.core.Keyword(null, "id", "id", -1388402092), ticket_id);
-                          var inst_18464 = parenticket.api.update_ticket_BANG_.call(null, parenticket.core.adapter, project_id, inst_18463);
-                          var state_18482__$1 = state_18482;
-                          var statearr_18487_18503 = state_18482__$1;
-                          statearr_18487_18503[2] = inst_18464;
-                          statearr_18487_18503[1] = 5;
+                        if (state_val_22382 === 3) {
+                          var inst_22362 = cljs.core.assoc.call(null, ticket, new cljs.core.Keyword(null, "id", "id", -1388402092), ticket_id);
+                          var inst_22363 = parenticket.api.update_ticket_BANG_.call(null, parenticket.core.adapter, project_id, inst_22362);
+                          var state_22381__$1 = state_22381;
+                          var statearr_22386_22402 = state_22381__$1;
+                          statearr_22386_22402[2] = inst_22363;
+                          statearr_22386_22402[1] = 5;
                           return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                         } else {
-                          if (state_val_18483 === 2) {
-                            var inst_18471 = state_18482[2];
-                            var state_18482__$1 = state_18482;
-                            if (cljs.core.truth_(inst_18471)) {
-                              var statearr_18488_18504 = state_18482__$1;
-                              statearr_18488_18504[1] = 6;
+                          if (state_val_22382 === 2) {
+                            var inst_22370 = state_22381[2];
+                            var state_22381__$1 = state_22381;
+                            if (cljs.core.truth_(inst_22370)) {
+                              var statearr_22387_22403 = state_22381__$1;
+                              statearr_22387_22403[1] = 6;
                             } else {
-                              var statearr_18489_18505 = state_18482__$1;
-                              statearr_18489_18505[1] = 7;
+                              var statearr_22388_22404 = state_22381__$1;
+                              statearr_22388_22404[1] = 7;
                             }
                             return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                           } else {
-                            if (state_val_18483 === 1) {
-                              var inst_18461 = cljs.core.println.call(null, "Saving...");
-                              var state_18482__$1 = function() {
-                                var statearr_18490 = state_18482;
-                                statearr_18490[7] = inst_18461;
-                                return statearr_18490;
+                            if (state_val_22382 === 1) {
+                              var inst_22360 = cljs.core.println.call(null, "Saving...");
+                              var state_22381__$1 = function() {
+                                var statearr_22389 = state_22381;
+                                statearr_22389[7] = inst_22360;
+                                return statearr_22389;
                               }();
                               if (cljs.core.truth_(ticket_id)) {
-                                var statearr_18491_18506 = state_18482__$1;
-                                statearr_18491_18506[1] = 3;
+                                var statearr_22390_22405 = state_22381__$1;
+                                statearr_22390_22405[1] = 3;
                               } else {
-                                var statearr_18492_18507 = state_18482__$1;
-                                statearr_18492_18507[1] = 4;
+                                var statearr_22391_22406 = state_22381__$1;
+                                statearr_22391_22406[1] = 4;
                               }
                               return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                             } else {
@@ -56552,22 +56552,22 @@ parenticket.core.handle_edit_BANG_ = function handle_edit_BANG_(project_id, tick
                 }
               }
             };
-          }(c__8455__auto__, ticket, map__18460, map__18460__$1, status, priority, tags, description, name, tags__$1);
-          return function(switch__8440__auto__, c__8455__auto__, ticket, map__18460, map__18460__$1, status, priority, tags, description, name, tags__$1) {
+          }(c__8455__auto__, ticket, map__22359, map__22359__$1, status, priority, tags, description, name, tags__$1);
+          return function(switch__8440__auto__, c__8455__auto__, ticket, map__22359, map__22359__$1, status, priority, tags, description, name, tags__$1) {
             return function() {
               var state_machine__8441__auto__ = null;
               var state_machine__8441__auto____0 = function() {
-                var statearr_18496 = [null, null, null, null, null, null, null, null];
-                statearr_18496[0] = state_machine__8441__auto__;
-                statearr_18496[1] = 1;
-                return statearr_18496;
+                var statearr_22395 = [null, null, null, null, null, null, null, null];
+                statearr_22395[0] = state_machine__8441__auto__;
+                statearr_22395[1] = 1;
+                return statearr_22395;
               };
-              var state_machine__8441__auto____1 = function(state_18482) {
+              var state_machine__8441__auto____1 = function(state_22381) {
                 while (true) {
                   var ret_value__8442__auto__ = function() {
                     try {
                       while (true) {
-                        var result__8443__auto__ = switch__8440__auto__.call(null, state_18482);
+                        var result__8443__auto__ = switch__8440__auto__.call(null, state_22381);
                         if (cljs.core.keyword_identical_QMARK_.call(null, result__8443__auto__, new cljs.core.Keyword(null, "recur", "recur", -437573268))) {
                           continue;
                         } else {
@@ -56575,16 +56575,16 @@ parenticket.core.handle_edit_BANG_ = function handle_edit_BANG_(project_id, tick
                         }
                         break;
                       }
-                    } catch (e18497) {
-                      if (e18497 instanceof Object) {
-                        var ex__8444__auto__ = e18497;
-                        var statearr_18498_18508 = state_18482;
-                        statearr_18498_18508[5] = ex__8444__auto__;
-                        cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_18482);
+                    } catch (e22396) {
+                      if (e22396 instanceof Object) {
+                        var ex__8444__auto__ = e22396;
+                        var statearr_22397_22407 = state_22381;
+                        statearr_22397_22407[5] = ex__8444__auto__;
+                        cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_22381);
                         return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                       } else {
                         if (new cljs.core.Keyword(null, "else", "else", -1508377146)) {
-                          throw e18497;
+                          throw e22396;
                         } else {
                           return null;
                         }
@@ -56592,8 +56592,8 @@ parenticket.core.handle_edit_BANG_ = function handle_edit_BANG_(project_id, tick
                     }
                   }();
                   if (cljs.core.keyword_identical_QMARK_.call(null, ret_value__8442__auto__, new cljs.core.Keyword(null, "recur", "recur", -437573268))) {
-                    var G__18509 = state_18482;
-                    state_18482 = G__18509;
+                    var G__22408 = state_22381;
+                    state_22381 = G__22408;
                     continue;
                   } else {
                     return ret_value__8442__auto__;
@@ -56601,12 +56601,12 @@ parenticket.core.handle_edit_BANG_ = function handle_edit_BANG_(project_id, tick
                   break;
                 }
               };
-              state_machine__8441__auto__ = function(state_18482) {
+              state_machine__8441__auto__ = function(state_22381) {
                 switch(arguments.length) {
                   case 0:
                     return state_machine__8441__auto____0.call(this);
                   case 1:
-                    return state_machine__8441__auto____1.call(this, state_18482);
+                    return state_machine__8441__auto____1.call(this, state_22381);
                 }
                 throw new Error("Invalid arity: " + arguments.length);
               };
@@ -56614,16 +56614,16 @@ parenticket.core.handle_edit_BANG_ = function handle_edit_BANG_(project_id, tick
               state_machine__8441__auto__.cljs$core$IFn$_invoke$arity$1 = state_machine__8441__auto____1;
               return state_machine__8441__auto__;
             }();
-          }(switch__8440__auto__, c__8455__auto__, ticket, map__18460, map__18460__$1, status, priority, tags, description, name, tags__$1);
+          }(switch__8440__auto__, c__8455__auto__, ticket, map__22359, map__22359__$1, status, priority, tags, description, name, tags__$1);
         }();
         var state__8457__auto__ = function() {
-          var statearr_18499 = f__8456__auto__.call(null);
-          statearr_18499[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__8455__auto__;
-          return statearr_18499;
+          var statearr_22398 = f__8456__auto__.call(null);
+          statearr_22398[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__8455__auto__;
+          return statearr_22398;
         }();
         return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, state__8457__auto__);
       };
-    }(c__8455__auto__, ticket, map__18460, map__18460__$1, status, priority, tags, description, name, tags__$1));
+    }(c__8455__auto__, ticket, map__22359, map__22359__$1, status, priority, tags, description, name, tags__$1));
     return c__8455__auto__;
   } else {
     throw cljs.core.ex_info.call(null, "name empty", (new cljs.core.Keyword(null, "ticket", "ticket", 1810559700)).cljs$core$IFn$_invoke$arity$1(ticket));
@@ -56633,35 +56633,35 @@ parenticket.core.change = function change(owner, key, e) {
   return om.core.set_state_BANG_.call(null, owner, key, e.target.value);
 };
 parenticket.core.edit_ticket_view = function edit_ticket_view(ticket, owner, opts) {
-  if (typeof parenticket.core.t18525 !== "undefined") {
+  if (typeof parenticket.core.t22424 !== "undefined") {
   } else {
-    parenticket.core.t18525 = function(opts, owner, ticket, edit_ticket_view, meta18526) {
+    parenticket.core.t22424 = function(opts, owner, ticket, edit_ticket_view, meta22425) {
       this.opts = opts;
       this.owner = owner;
       this.ticket = ticket;
       this.edit_ticket_view = edit_ticket_view;
-      this.meta18526 = meta18526;
+      this.meta22425 = meta22425;
       this.cljs$lang$protocol_mask$partition1$ = 0;
       this.cljs$lang$protocol_mask$partition0$ = 393216;
     };
-    parenticket.core.t18525.cljs$lang$type = true;
-    parenticket.core.t18525.cljs$lang$ctorStr = "parenticket.core/t18525";
-    parenticket.core.t18525.cljs$lang$ctorPrWriter = function(this__5595__auto__, writer__5596__auto__, opt__5597__auto__) {
-      return cljs.core._write.call(null, writer__5596__auto__, "parenticket.core/t18525");
+    parenticket.core.t22424.cljs$lang$type = true;
+    parenticket.core.t22424.cljs$lang$ctorStr = "parenticket.core/t22424";
+    parenticket.core.t22424.cljs$lang$ctorPrWriter = function(this__5595__auto__, writer__5596__auto__, opt__5597__auto__) {
+      return cljs.core._write.call(null, writer__5596__auto__, "parenticket.core/t22424");
     };
-    parenticket.core.t18525.prototype.om$core$IRenderState$ = true;
-    parenticket.core.t18525.prototype.om$core$IRenderState$render_state$arity$2 = function(_, p__18528) {
+    parenticket.core.t22424.prototype.om$core$IRenderState$ = true;
+    parenticket.core.t22424.prototype.om$core$IRenderState$render_state$arity$2 = function(_, p__22427) {
       var self__ = this;
-      var map__18529 = p__18528;
-      var map__18529__$1 = cljs.core.seq_QMARK_.call(null, map__18529) ? cljs.core.apply.call(null, cljs.core.hash_map, map__18529) : map__18529;
-      var status = cljs.core.get.call(null, map__18529__$1, new cljs.core.Keyword(null, "status", "status", -1997798413));
-      var deadline = cljs.core.get.call(null, map__18529__$1, new cljs.core.Keyword(null, "deadline", "deadline", 628964572));
-      var priority = cljs.core.get.call(null, map__18529__$1, new cljs.core.Keyword(null, "priority", "priority", 1431093715));
-      var tags = cljs.core.get.call(null, map__18529__$1, new cljs.core.Keyword(null, "tags", "tags", 1771418977));
-      var description = cljs.core.get.call(null, map__18529__$1, new cljs.core.Keyword(null, "description", "description", -1428560544));
-      var name = cljs.core.get.call(null, map__18529__$1, new cljs.core.Keyword(null, "name", "name", 1843675177));
+      var map__22428 = p__22427;
+      var map__22428__$1 = cljs.core.seq_QMARK_.call(null, map__22428) ? cljs.core.apply.call(null, cljs.core.hash_map, map__22428) : map__22428;
+      var status = cljs.core.get.call(null, map__22428__$1, new cljs.core.Keyword(null, "status", "status", -1997798413));
+      var deadline = cljs.core.get.call(null, map__22428__$1, new cljs.core.Keyword(null, "deadline", "deadline", 628964572));
+      var priority = cljs.core.get.call(null, map__22428__$1, new cljs.core.Keyword(null, "priority", "priority", 1431093715));
+      var tags = cljs.core.get.call(null, map__22428__$1, new cljs.core.Keyword(null, "tags", "tags", 1771418977));
+      var description = cljs.core.get.call(null, map__22428__$1, new cljs.core.Keyword(null, "description", "description", -1428560544));
+      var name = cljs.core.get.call(null, map__22428__$1, new cljs.core.Keyword(null, "name", "name", 1843675177));
       var ___$1 = this;
-      return React.DOM.div({"className":"dialog ticket"}, React.DOM.div({"className":"close", "onClick":function(___$1, map__18529, map__18529__$1, status, deadline, priority, tags, description, name) {
+      return React.DOM.div({"className":"dialog ticket"}, React.DOM.div({"className":"close", "onClick":function(___$1, map__22428, map__22428__$1, status, deadline, priority, tags, description, name) {
         return function(___$2) {
           if (cljs.core.fn_QMARK_.call(null, (new cljs.core.Keyword(null, "close", "close", 1835149582)).cljs$core$IFn$_invoke$arity$1(self__.opts))) {
             (new cljs.core.Keyword(null, "close", "close", 1835149582)).cljs$core$IFn$_invoke$arity$1(self__.opts).call(null);
@@ -56669,19 +56669,19 @@ parenticket.core.edit_ticket_view = function edit_ticket_view(ticket, owner, opt
           }
           return false;
         };
-      }(___$1, map__18529, map__18529__$1, status, deadline, priority, tags, description, name)}, "X"), React.DOM.form({"onSubmit":function(___$1, map__18529, map__18529__$1, status, deadline, priority, tags, description, name) {
+      }(___$1, map__22428, map__22428__$1, status, deadline, priority, tags, description, name)}, "X"), React.DOM.form({"onSubmit":function(___$1, map__22428, map__22428__$1, status, deadline, priority, tags, description, name) {
         return function(___$2) {
           parenticket.core.handle_edit_BANG_.call(null, (new cljs.core.Keyword(null, "project_id", "project_id", 1147160698)).cljs$core$IFn$_invoke$arity$1(self__.ticket), (new cljs.core.Keyword(null, "id", "id", -1388402092)).cljs$core$IFn$_invoke$arity$1(self__.ticket), self__.owner);
           return false;
         };
-      }(___$1, map__18529, map__18529__$1, status, deadline, priority, tags, description, name)}, React.DOM.h3(null, "Ticket"), React.DOM.label({"className":"name"}, "Name", sablono.interpreter.input.call(null, {"className":"name", "value":name, "onChange":cljs.core.partial.call(null, parenticket.core.change, self__.owner, new cljs.core.Keyword(null, "name", "name", 1843675177))})), React.DOM.label({"className":"description"}, "Description", sablono.interpreter.input.call(null, {"className":"description", 
-      "value":description, "onChange":cljs.core.partial.call(null, parenticket.core.change, self__.owner, new cljs.core.Keyword(null, "description", "description", -1428560544))})), React.DOM.label({"className":"tags"}, "Tags", sablono.interpreter.input.call(null, {"className":"tags", "value":clojure.string.join.call(null, ", ", tags), "onChange":function(___$1, map__18529, map__18529__$1, status, deadline, priority, tags, description, name) {
+      }(___$1, map__22428, map__22428__$1, status, deadline, priority, tags, description, name)}, React.DOM.h3(null, "Ticket"), React.DOM.label({"className":"name"}, "Name", sablono.interpreter.input.call(null, {"className":"name", "value":name, "onChange":cljs.core.partial.call(null, parenticket.core.change, self__.owner, new cljs.core.Keyword(null, "name", "name", 1843675177))})), React.DOM.label({"className":"description"}, "Description", sablono.interpreter.input.call(null, {"className":"description", 
+      "value":description, "onChange":cljs.core.partial.call(null, parenticket.core.change, self__.owner, new cljs.core.Keyword(null, "description", "description", -1428560544))})), React.DOM.label({"className":"tags"}, "Tags", sablono.interpreter.input.call(null, {"className":"tags", "value":clojure.string.join.call(null, ", ", tags), "onChange":function(___$1, map__22428, map__22428__$1, status, deadline, priority, tags, description, name) {
         return function(e) {
           om.core.set_state_BANG_.call(null, self__.owner, new cljs.core.Keyword(null, "tags", "tags", 1771418977), clojure.string.split.call(null, e.target.value, /,\W*/));
           return false;
         };
-      }(___$1, map__18529, map__18529__$1, status, deadline, priority, tags, description, name)})), React.DOM.label({"className":"deadline"}, "Deadline", sablono.interpreter.input.call(null, {"className":"deadline", "value":deadline, "disabled":true})), React.DOM.label({"className":"priority"}, "Priority", sablono.interpreter.input.call(null, {"className":"priority", "value":priority, "onChange":cljs.core.partial.call(null, parenticket.core.change, self__.owner, new cljs.core.Keyword(null, "priority", 
-      "priority", 1431093715))})), React.DOM.label({"className":"status"}, "Status", React.DOM.select({"className":"status", "value":status, "onChange":cljs.core.partial.call(null, parenticket.core.change, self__.owner, new cljs.core.Keyword(null, "status", "status", -1997798413))}, React.DOM.option({"value":0}, "Todo"), React.DOM.option({"value":1}, "Doing"), React.DOM.option({"value":2}, "Done"))), React.DOM.button({"className":"cancel", "type":"button", "onClick":function(___$1, map__18529, map__18529__$1, 
+      }(___$1, map__22428, map__22428__$1, status, deadline, priority, tags, description, name)})), React.DOM.label({"className":"deadline"}, "Deadline", sablono.interpreter.input.call(null, {"className":"deadline", "value":deadline, "disabled":true})), React.DOM.label({"className":"priority"}, "Priority", sablono.interpreter.input.call(null, {"className":"priority", "value":priority, "onChange":cljs.core.partial.call(null, parenticket.core.change, self__.owner, new cljs.core.Keyword(null, "priority", 
+      "priority", 1431093715))})), React.DOM.label({"className":"status"}, "Status", React.DOM.select({"className":"status", "value":status, "onChange":cljs.core.partial.call(null, parenticket.core.change, self__.owner, new cljs.core.Keyword(null, "status", "status", -1997798413))}, React.DOM.option({"value":0}, "Todo"), React.DOM.option({"value":1}, "Doing"), React.DOM.option({"value":2}, "Done"))), React.DOM.button({"className":"cancel", "type":"button", "onClick":function(___$1, map__22428, map__22428__$1, 
       status, deadline, priority, tags, description, name) {
         return function(___$2) {
           if (cljs.core.fn_QMARK_.call(null, (new cljs.core.Keyword(null, "close", "close", 1835149582)).cljs$core$IFn$_invoke$arity$1(self__.opts))) {
@@ -56690,66 +56690,66 @@ parenticket.core.edit_ticket_view = function edit_ticket_view(ticket, owner, opt
           }
           return false;
         };
-      }(___$1, map__18529, map__18529__$1, status, deadline, priority, tags, description, name)}, "Cancel"), React.DOM.button({"className":"save", "type":new cljs.core.Keyword(null, "submit", "submit", -49315317)}, "Save")));
+      }(___$1, map__22428, map__22428__$1, status, deadline, priority, tags, description, name)}, "Cancel"), React.DOM.button({"className":"save", "type":new cljs.core.Keyword(null, "submit", "submit", -49315317)}, "Save")));
     };
-    parenticket.core.t18525.prototype.om$core$IInitState$ = true;
-    parenticket.core.t18525.prototype.om$core$IInitState$init_state$arity$1 = function(_) {
+    parenticket.core.t22424.prototype.om$core$IInitState$ = true;
+    parenticket.core.t22424.prototype.om$core$IInitState$init_state$arity$1 = function(_) {
       var self__ = this;
       var ___$1 = this;
       return om.core.value.call(null, self__.ticket);
     };
-    parenticket.core.t18525.prototype.cljs$core$IMeta$_meta$arity$1 = function(_18527) {
+    parenticket.core.t22424.prototype.cljs$core$IMeta$_meta$arity$1 = function(_22426) {
       var self__ = this;
-      var _18527__$1 = this;
-      return self__.meta18526;
+      var _22426__$1 = this;
+      return self__.meta22425;
     };
-    parenticket.core.t18525.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(_18527, meta18526__$1) {
+    parenticket.core.t22424.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(_22426, meta22425__$1) {
       var self__ = this;
-      var _18527__$1 = this;
-      return new parenticket.core.t18525(self__.opts, self__.owner, self__.ticket, self__.edit_ticket_view, meta18526__$1);
+      var _22426__$1 = this;
+      return new parenticket.core.t22424(self__.opts, self__.owner, self__.ticket, self__.edit_ticket_view, meta22425__$1);
     };
-    parenticket.core.__GT_t18525 = function __GT_t18525(opts__$1, owner__$1, ticket__$1, edit_ticket_view__$1, meta18526) {
-      return new parenticket.core.t18525(opts__$1, owner__$1, ticket__$1, edit_ticket_view__$1, meta18526);
+    parenticket.core.__GT_t22424 = function __GT_t22424(opts__$1, owner__$1, ticket__$1, edit_ticket_view__$1, meta22425) {
+      return new parenticket.core.t22424(opts__$1, owner__$1, ticket__$1, edit_ticket_view__$1, meta22425);
     };
   }
-  return new parenticket.core.t18525(opts, owner, ticket, edit_ticket_view, null);
+  return new parenticket.core.t22424(opts, owner, ticket, edit_ticket_view, null);
 };
 parenticket.core.ticket_matches_QMARK_ = function ticket_matches_QMARK_(filter, ticket) {
   return cljs.core.not_EQ_.call(null, -1, clojure.string.lower_case.call(null, cljs.core.reduce.call(null, cljs.core.str, cljs.core.vals.call(null, ticket))).indexOf(filter));
 };
 parenticket.core.render_start = null;
 parenticket.core.parenticket = function parenticket__$1(state, owner) {
-  if (typeof parenticket.core.t18665 !== "undefined") {
+  if (typeof parenticket.core.t22564 !== "undefined") {
   } else {
-    parenticket.core.t18665 = function(owner, state, parenticket, meta18666) {
+    parenticket.core.t22564 = function(owner, state, parenticket, meta22565) {
       this.owner = owner;
       this.state = state;
       this.parenticket = parenticket;
-      this.meta18666 = meta18666;
+      this.meta22565 = meta22565;
       this.cljs$lang$protocol_mask$partition1$ = 0;
       this.cljs$lang$protocol_mask$partition0$ = 393216;
     };
-    parenticket.core.t18665.cljs$lang$type = true;
-    parenticket.core.t18665.cljs$lang$ctorStr = "parenticket.core/t18665";
-    parenticket.core.t18665.cljs$lang$ctorPrWriter = function(this__5595__auto__, writer__5596__auto__, opt__5597__auto__) {
-      return cljs.core._write.call(null, writer__5596__auto__, "parenticket.core/t18665");
+    parenticket.core.t22564.cljs$lang$type = true;
+    parenticket.core.t22564.cljs$lang$ctorStr = "parenticket.core/t22564";
+    parenticket.core.t22564.cljs$lang$ctorPrWriter = function(this__5595__auto__, writer__5596__auto__, opt__5597__auto__) {
+      return cljs.core._write.call(null, writer__5596__auto__, "parenticket.core/t22564");
     };
-    parenticket.core.t18665.prototype.om$core$IRenderState$ = true;
-    parenticket.core.t18665.prototype.om$core$IRenderState$render_state$arity$2 = function(_, p__18668) {
+    parenticket.core.t22564.prototype.om$core$IRenderState$ = true;
+    parenticket.core.t22564.prototype.om$core$IRenderState$render_state$arity$2 = function(_, p__22567) {
       var self__ = this;
-      var map__18669 = p__18668;
-      var map__18669__$1 = cljs.core.seq_QMARK_.call(null, map__18669) ? cljs.core.apply.call(null, cljs.core.hash_map, map__18669) : map__18669;
-      var ticket_filter = cljs.core.get.call(null, map__18669__$1, new cljs.core.Keyword(null, "ticket-filter", "ticket-filter", -1539714774));
-      var edit_QMARK_ = cljs.core.get.call(null, map__18669__$1, new cljs.core.Keyword(null, "edit?", "edit?", -842131310));
-      var current_ticket = cljs.core.get.call(null, map__18669__$1, new cljs.core.Keyword(null, "current-ticket", "current-ticket", -1789027729));
+      var map__22568 = p__22567;
+      var map__22568__$1 = cljs.core.seq_QMARK_.call(null, map__22568) ? cljs.core.apply.call(null, cljs.core.hash_map, map__22568) : map__22568;
+      var ticket_filter = cljs.core.get.call(null, map__22568__$1, new cljs.core.Keyword(null, "ticket-filter", "ticket-filter", -1539714774));
+      var edit_QMARK_ = cljs.core.get.call(null, map__22568__$1, new cljs.core.Keyword(null, "edit?", "edit?", -842131310));
+      var current_ticket = cljs.core.get.call(null, map__22568__$1, new cljs.core.Keyword(null, "current-ticket", "current-ticket", -1789027729));
       var ___$1 = this;
       var current_project = (new cljs.core.Keyword(null, "current-project", "current-project", 903630396)).cljs$core$IFn$_invoke$arity$1(self__.state);
-      var tickets = cljs.core.group_by.call(null, new cljs.core.Keyword(null, "status", "status", -1997798413), cljs.core.filter.call(null, cljs.core.partial.call(null, parenticket.core.ticket_matches_QMARK_, ticket_filter), cljs.core.filter.call(null, function(current_project, ___$1, map__18669, map__18669__$1, ticket_filter, edit_QMARK_, current_ticket) {
-        return function(p1__18540_SHARP_) {
-          return cljs.core._EQ_.call(null, current_project, (new cljs.core.Keyword(null, "project_id", "project_id", 1147160698)).cljs$core$IFn$_invoke$arity$1(p1__18540_SHARP_));
+      var tickets = cljs.core.group_by.call(null, new cljs.core.Keyword(null, "status", "status", -1997798413), cljs.core.filter.call(null, cljs.core.partial.call(null, parenticket.core.ticket_matches_QMARK_, ticket_filter), cljs.core.filter.call(null, function(current_project, ___$1, map__22568, map__22568__$1, ticket_filter, edit_QMARK_, current_ticket) {
+        return function(p1__22439_SHARP_) {
+          return cljs.core._EQ_.call(null, current_project, (new cljs.core.Keyword(null, "project_id", "project_id", 1147160698)).cljs$core$IFn$_invoke$arity$1(p1__22439_SHARP_));
         };
-      }(current_project, ___$1, map__18669, map__18669__$1, ticket_filter, edit_QMARK_, current_ticket), cljs.core.vals.call(null, (new cljs.core.Keyword(null, "tickets", "tickets", -2077135171)).cljs$core$IFn$_invoke$arity$1(self__.state)))));
-      var attrs18670 = cljs.core.truth_(edit_QMARK_) ? cljs.core._conj.call(null, cljs.core._conj.call(null, cljs.core.List.EMPTY, function() {
+      }(current_project, ___$1, map__22568, map__22568__$1, ticket_filter, edit_QMARK_, current_ticket), cljs.core.vals.call(null, (new cljs.core.Keyword(null, "tickets", "tickets", -2077135171)).cljs$core$IFn$_invoke$arity$1(self__.state)))));
+      var attrs22569 = cljs.core.truth_(edit_QMARK_) ? cljs.core._conj.call(null, cljs.core._conj.call(null, cljs.core.List.EMPTY, function() {
         var ticket = cljs.core.get_in.call(null, self__.state, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tickets", "tickets", -2077135171), current_ticket], null));
         return om.core.build.call(null, cljs.core.truth_(edit_QMARK_) ? parenticket.core.edit_ticket_view : parenticket.core.ticket_view, function() {
           var or__5028__auto__ = om.core.value.call(null, ticket);
@@ -56758,205 +56758,205 @@ parenticket.core.parenticket = function parenticket__$1(state, owner) {
           } else {
             return new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "project_id", "project_id", 1147160698), (new cljs.core.Keyword(null, "current-project", "current-project", 903630396)).cljs$core$IFn$_invoke$arity$1(self__.state)], null);
           }
-        }(), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "opts", "opts", 155075701), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "close", "close", 1835149582), function(ticket, current_project, tickets, ___$1, map__18669, map__18669__$1, ticket_filter, edit_QMARK_, current_ticket) {
+        }(), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "opts", "opts", 155075701), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "close", "close", 1835149582), function(ticket, current_project, tickets, ___$1, map__22568, map__22568__$1, ticket_filter, edit_QMARK_, current_ticket) {
           return function() {
             return parenticket.navigation.navigate_BANG_.call(null, parenticket.navigation.project_route.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "project", "project", 1124394579), (new cljs.core.Keyword(null, "current-project", "current-project", 903630396)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, self__.state))], null)));
           };
-        }(ticket, current_project, tickets, ___$1, map__18669, map__18669__$1, ticket_filter, edit_QMARK_, current_ticket)], null)], null));
+        }(ticket, current_project, tickets, ___$1, map__22568, map__22568__$1, ticket_filter, edit_QMARK_, current_ticket)], null)], null));
       }()), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, ".overlay", ".overlay", 839880791)], null)) : null;
-      if (cljs.core.map_QMARK_.call(null, attrs18670)) {
-        return React.DOM.div(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["app"], null)], null), attrs18670)), React.DOM.div({"className":"pane todo"}, React.DOM.h2(null, "Todo"), sablono.interpreter.interpret.call(null, om.core.build.call(null, parenticket.core.ticket_column, 
+      if (cljs.core.map_QMARK_.call(null, attrs22569)) {
+        return React.DOM.div(sablono.interpreter.attributes.call(null, sablono.util.merge_with_class.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["app"], null)], null), attrs22569)), React.DOM.div({"className":"pane todo"}, React.DOM.h2(null, "Todo"), sablono.interpreter.interpret.call(null, om.core.build.call(null, parenticket.core.ticket_column, 
         cljs.core.get.call(null, tickets, 0)))), React.DOM.div({"className":"pane doing"}, React.DOM.h2(null, "Doing"), sablono.interpreter.interpret.call(null, om.core.build.call(null, parenticket.core.ticket_column, cljs.core.get.call(null, tickets, 1)))), React.DOM.div({"className":"pane done"}, React.DOM.h2(null, "Done"), sablono.interpreter.interpret.call(null, om.core.build.call(null, parenticket.core.ticket_column, cljs.core.get.call(null, tickets, 2)))), sablono.interpreter.interpret.call(null, 
         om.core.build.call(null, parenticket.core.project_column, self__.state, new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "opts", "opts", 155075701), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "filter-chan", "filter-chan", -319950203), om.core.get_state.call(null, self__.owner, new cljs.core.Keyword(null, "filter-chan", "filter-chan", -319950203))], null), new cljs.core.Keyword(null, "state", "state", -1988618099), new cljs.core.PersistentArrayMap(null, 
         1, [new cljs.core.Keyword(null, "search", "search", 1564939822), ticket_filter], null)], null))));
       } else {
-        return React.DOM.div({"className":"app"}, sablono.interpreter.interpret.call(null, attrs18670), React.DOM.div({"className":"pane todo"}, React.DOM.h2(null, "Todo"), sablono.interpreter.interpret.call(null, om.core.build.call(null, parenticket.core.ticket_column, cljs.core.get.call(null, tickets, 0)))), React.DOM.div({"className":"pane doing"}, React.DOM.h2(null, "Doing"), sablono.interpreter.interpret.call(null, om.core.build.call(null, parenticket.core.ticket_column, cljs.core.get.call(null, 
+        return React.DOM.div({"className":"app"}, sablono.interpreter.interpret.call(null, attrs22569), React.DOM.div({"className":"pane todo"}, React.DOM.h2(null, "Todo"), sablono.interpreter.interpret.call(null, om.core.build.call(null, parenticket.core.ticket_column, cljs.core.get.call(null, tickets, 0)))), React.DOM.div({"className":"pane doing"}, React.DOM.h2(null, "Doing"), sablono.interpreter.interpret.call(null, om.core.build.call(null, parenticket.core.ticket_column, cljs.core.get.call(null, 
         tickets, 1)))), React.DOM.div({"className":"pane done"}, React.DOM.h2(null, "Done"), sablono.interpreter.interpret.call(null, om.core.build.call(null, parenticket.core.ticket_column, cljs.core.get.call(null, tickets, 2)))), sablono.interpreter.interpret.call(null, om.core.build.call(null, parenticket.core.project_column, self__.state, new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "opts", "opts", 155075701), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, 
         "filter-chan", "filter-chan", -319950203), om.core.get_state.call(null, self__.owner, new cljs.core.Keyword(null, "filter-chan", "filter-chan", -319950203))], null), new cljs.core.Keyword(null, "state", "state", -1988618099), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "search", "search", 1564939822), ticket_filter], null)], null))));
       }
     };
-    parenticket.core.t18665.prototype.om$core$IWillMount$ = true;
-    parenticket.core.t18665.prototype.om$core$IWillMount$will_mount$arity$1 = function(_) {
+    parenticket.core.t22564.prototype.om$core$IWillMount$ = true;
+    parenticket.core.t22564.prototype.om$core$IWillMount$will_mount$arity$1 = function(_) {
       var self__ = this;
       var ___$1 = this;
-      var c__8455__auto___18789 = cljs.core.async.chan.call(null, 1);
-      cljs.core.async.impl.dispatch.run.call(null, function(c__8455__auto___18789, ___$1) {
+      var c__8455__auto___22688 = cljs.core.async.chan.call(null, 1);
+      cljs.core.async.impl.dispatch.run.call(null, function(c__8455__auto___22688, ___$1) {
         return function() {
           var f__8456__auto__ = function() {
-            var switch__8440__auto__ = function(c__8455__auto___18789, ___$1) {
-              return function(state_18730) {
-                var state_val_18731 = state_18730[1];
-                if (state_val_18731 === 7) {
-                  var inst_18689 = state_18730[7];
-                  var state_18730__$1 = state_18730;
-                  var statearr_18732_18790 = state_18730__$1;
-                  statearr_18732_18790[2] = inst_18689;
-                  statearr_18732_18790[1] = 8;
+            var switch__8440__auto__ = function(c__8455__auto___22688, ___$1) {
+              return function(state_22629) {
+                var state_val_22630 = state_22629[1];
+                if (state_val_22630 === 7) {
+                  var inst_22588 = state_22629[7];
+                  var state_22629__$1 = state_22629;
+                  var statearr_22631_22689 = state_22629__$1;
+                  statearr_22631_22689[2] = inst_22588;
+                  statearr_22631_22689[1] = 8;
                   return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                 } else {
-                  if (state_val_18731 === 1) {
-                    var state_18730__$1 = state_18730;
-                    var statearr_18733_18791 = state_18730__$1;
-                    statearr_18733_18791[2] = null;
-                    statearr_18733_18791[1] = 2;
+                  if (state_val_22630 === 1) {
+                    var state_22629__$1 = state_22629;
+                    var statearr_22632_22690 = state_22629__$1;
+                    statearr_22632_22690[2] = null;
+                    statearr_22632_22690[1] = 2;
                     return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                   } else {
-                    if (state_val_18731 === 4) {
-                      var inst_18686 = state_18730[2];
-                      var state_18730__$1 = function() {
-                        var statearr_18734 = state_18730;
-                        statearr_18734[8] = inst_18686;
-                        return statearr_18734;
+                    if (state_val_22630 === 4) {
+                      var inst_22585 = state_22629[2];
+                      var state_22629__$1 = function() {
+                        var statearr_22633 = state_22629;
+                        statearr_22633[8] = inst_22585;
+                        return statearr_22633;
                       }();
-                      return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_18730__$1, 5, parenticket.navigation.navigation_channel);
+                      return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_22629__$1, 5, parenticket.navigation.navigation_channel);
                     } else {
-                      if (state_val_18731 === 15) {
-                        var inst_18715 = state_18730[2];
-                        var state_18730__$1 = state_18730;
-                        var statearr_18735_18792 = state_18730__$1;
-                        statearr_18735_18792[2] = inst_18715;
-                        statearr_18735_18792[1] = 14;
+                      if (state_val_22630 === 15) {
+                        var inst_22614 = state_22629[2];
+                        var state_22629__$1 = state_22629;
+                        var statearr_22634_22691 = state_22629__$1;
+                        statearr_22634_22691[2] = inst_22614;
+                        statearr_22634_22691[1] = 14;
                         return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                       } else {
-                        if (state_val_18731 === 13) {
-                          var state_18730__$1 = state_18730;
-                          var statearr_18736_18793 = state_18730__$1;
-                          statearr_18736_18793[2] = null;
-                          statearr_18736_18793[1] = 14;
+                        if (state_val_22630 === 13) {
+                          var state_22629__$1 = state_22629;
+                          var statearr_22635_22692 = state_22629__$1;
+                          statearr_22635_22692[2] = null;
+                          statearr_22635_22692[1] = 14;
                           return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                         } else {
-                          if (state_val_18731 === 6) {
-                            var inst_18689 = state_18730[7];
-                            var inst_18692 = cljs.core.apply.call(null, cljs.core.hash_map, inst_18689);
-                            var state_18730__$1 = state_18730;
-                            var statearr_18737_18794 = state_18730__$1;
-                            statearr_18737_18794[2] = inst_18692;
-                            statearr_18737_18794[1] = 8;
+                          if (state_val_22630 === 6) {
+                            var inst_22588 = state_22629[7];
+                            var inst_22591 = cljs.core.apply.call(null, cljs.core.hash_map, inst_22588);
+                            var state_22629__$1 = state_22629;
+                            var statearr_22636_22693 = state_22629__$1;
+                            statearr_22636_22693[2] = inst_22591;
+                            statearr_22636_22693[1] = 8;
                             return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                           } else {
-                            if (state_val_18731 === 3) {
-                              var inst_18728 = state_18730[2];
-                              var state_18730__$1 = state_18730;
-                              return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_18730__$1, inst_18728);
+                            if (state_val_22630 === 3) {
+                              var inst_22627 = state_22629[2];
+                              var state_22629__$1 = state_22629;
+                              return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_22629__$1, inst_22627);
                             } else {
-                              if (state_val_18731 === 12) {
-                                var inst_18698 = state_18730[9];
-                                var inst_18709 = cljs.core.deref.call(null, self__.state);
-                                var inst_18710 = [new cljs.core.Keyword(null, "projects", "projects", -364845983), inst_18698];
-                                var inst_18711 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, inst_18710, null);
-                                var inst_18712 = cljs.core.get_in.call(null, inst_18709, inst_18711);
-                                var inst_18713 = parenticket.api.reload_tickets_BANG_.call(null, parenticket.core.adapter, inst_18712);
-                                var state_18730__$1 = state_18730;
-                                return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_18730__$1, 15, inst_18713);
+                              if (state_val_22630 === 12) {
+                                var inst_22597 = state_22629[9];
+                                var inst_22608 = cljs.core.deref.call(null, self__.state);
+                                var inst_22609 = [new cljs.core.Keyword(null, "projects", "projects", -364845983), inst_22597];
+                                var inst_22610 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, inst_22609, null);
+                                var inst_22611 = cljs.core.get_in.call(null, inst_22608, inst_22610);
+                                var inst_22612 = parenticket.api.reload_tickets_BANG_.call(null, parenticket.core.adapter, inst_22611);
+                                var state_22629__$1 = state_22629;
+                                return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_22629__$1, 15, inst_22612);
                               } else {
-                                if (state_val_18731 === 2) {
-                                  var inst_18684 = parenticket.api.reload_projects_BANG_.call(null, parenticket.core.adapter);
-                                  var state_18730__$1 = state_18730;
-                                  return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_18730__$1, 4, inst_18684);
+                                if (state_val_22630 === 2) {
+                                  var inst_22583 = parenticket.api.reload_projects_BANG_.call(null, parenticket.core.adapter);
+                                  var state_22629__$1 = state_22629;
+                                  return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_22629__$1, 4, inst_22583);
                                 } else {
-                                  if (state_val_18731 === 11) {
-                                    var inst_18697 = state_18730[10];
-                                    var inst_18696 = state_18730[11];
-                                    var inst_18723 = state_18730[2];
-                                    var inst_18724 = om.core.set_state_BANG_.call(null, self__.owner, new cljs.core.Keyword(null, "current-ticket", "current-ticket", -1789027729), inst_18697);
-                                    var inst_18725 = om.core.set_state_BANG_.call(null, self__.owner, new cljs.core.Keyword(null, "edit?", "edit?", -842131310), inst_18696);
-                                    var state_18730__$1 = function() {
-                                      var statearr_18738 = state_18730;
-                                      statearr_18738[12] = inst_18723;
-                                      statearr_18738[13] = inst_18724;
-                                      statearr_18738[14] = inst_18725;
-                                      return statearr_18738;
+                                  if (state_val_22630 === 11) {
+                                    var inst_22595 = state_22629[10];
+                                    var inst_22596 = state_22629[11];
+                                    var inst_22622 = state_22629[2];
+                                    var inst_22623 = om.core.set_state_BANG_.call(null, self__.owner, new cljs.core.Keyword(null, "current-ticket", "current-ticket", -1789027729), inst_22596);
+                                    var inst_22624 = om.core.set_state_BANG_.call(null, self__.owner, new cljs.core.Keyword(null, "edit?", "edit?", -842131310), inst_22595);
+                                    var state_22629__$1 = function() {
+                                      var statearr_22637 = state_22629;
+                                      statearr_22637[12] = inst_22622;
+                                      statearr_22637[13] = inst_22623;
+                                      statearr_22637[14] = inst_22624;
+                                      return statearr_22637;
                                     }();
-                                    var statearr_18739_18795 = state_18730__$1;
-                                    statearr_18739_18795[2] = null;
-                                    statearr_18739_18795[1] = 2;
+                                    var statearr_22638_22694 = state_22629__$1;
+                                    statearr_22638_22694[2] = null;
+                                    statearr_22638_22694[1] = 2;
                                     return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                                   } else {
-                                    if (state_val_18731 === 9) {
-                                      var inst_18698 = state_18730[9];
-                                      var inst_18704 = cljs.core.println.call(null, "Switching to project ", inst_18698);
-                                      var inst_18705 = cljs.core.deref.call(null, self__.state);
-                                      var inst_18706 = (new cljs.core.Keyword(null, "current-project", "current-project", 903630396)).cljs$core$IFn$_invoke$arity$1(inst_18705);
-                                      var inst_18707 = cljs.core.not_EQ_.call(null, inst_18698, inst_18706);
-                                      var state_18730__$1 = function() {
-                                        var statearr_18740 = state_18730;
-                                        statearr_18740[15] = inst_18704;
-                                        return statearr_18740;
+                                    if (state_val_22630 === 9) {
+                                      var inst_22597 = state_22629[9];
+                                      var inst_22603 = cljs.core.println.call(null, "Switching to project ", inst_22597);
+                                      var inst_22604 = cljs.core.deref.call(null, self__.state);
+                                      var inst_22605 = (new cljs.core.Keyword(null, "current-project", "current-project", 903630396)).cljs$core$IFn$_invoke$arity$1(inst_22604);
+                                      var inst_22606 = cljs.core.not_EQ_.call(null, inst_22597, inst_22605);
+                                      var state_22629__$1 = function() {
+                                        var statearr_22639 = state_22629;
+                                        statearr_22639[15] = inst_22603;
+                                        return statearr_22639;
                                       }();
-                                      if (inst_18707) {
-                                        var statearr_18741_18796 = state_18730__$1;
-                                        statearr_18741_18796[1] = 12;
+                                      if (inst_22606) {
+                                        var statearr_22640_22695 = state_22629__$1;
+                                        statearr_22640_22695[1] = 12;
                                       } else {
-                                        var statearr_18742_18797 = state_18730__$1;
-                                        statearr_18742_18797[1] = 13;
+                                        var statearr_22641_22696 = state_22629__$1;
+                                        statearr_22641_22696[1] = 13;
                                       }
                                       return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                                     } else {
-                                      if (state_val_18731 === 5) {
-                                        var inst_18689 = state_18730[7];
-                                        var inst_18689__$1 = state_18730[2];
-                                        var inst_18690 = cljs.core.seq_QMARK_.call(null, inst_18689__$1);
-                                        var state_18730__$1 = function() {
-                                          var statearr_18743 = state_18730;
-                                          statearr_18743[7] = inst_18689__$1;
-                                          return statearr_18743;
+                                      if (state_val_22630 === 5) {
+                                        var inst_22588 = state_22629[7];
+                                        var inst_22588__$1 = state_22629[2];
+                                        var inst_22589 = cljs.core.seq_QMARK_.call(null, inst_22588__$1);
+                                        var state_22629__$1 = function() {
+                                          var statearr_22642 = state_22629;
+                                          statearr_22642[7] = inst_22588__$1;
+                                          return statearr_22642;
                                         }();
-                                        if (inst_18690) {
-                                          var statearr_18744_18798 = state_18730__$1;
-                                          statearr_18744_18798[1] = 6;
+                                        if (inst_22589) {
+                                          var statearr_22643_22697 = state_22629__$1;
+                                          statearr_22643_22697[1] = 6;
                                         } else {
-                                          var statearr_18745_18799 = state_18730__$1;
-                                          statearr_18745_18799[1] = 7;
+                                          var statearr_22644_22698 = state_22629__$1;
+                                          statearr_22644_22698[1] = 7;
                                         }
                                         return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                                       } else {
-                                        if (state_val_18731 === 14) {
-                                          var inst_18698 = state_18730[9];
-                                          var inst_18718 = state_18730[2];
-                                          var inst_18719 = om.core.update_BANG_.call(null, self__.state, new cljs.core.Keyword(null, "current-project", "current-project", 903630396), inst_18698);
-                                          var state_18730__$1 = function() {
-                                            var statearr_18746 = state_18730;
-                                            statearr_18746[16] = inst_18718;
-                                            return statearr_18746;
+                                        if (state_val_22630 === 14) {
+                                          var inst_22597 = state_22629[9];
+                                          var inst_22617 = state_22629[2];
+                                          var inst_22618 = om.core.update_BANG_.call(null, self__.state, new cljs.core.Keyword(null, "current-project", "current-project", 903630396), inst_22597);
+                                          var state_22629__$1 = function() {
+                                            var statearr_22645 = state_22629;
+                                            statearr_22645[16] = inst_22617;
+                                            return statearr_22645;
                                           }();
-                                          var statearr_18747_18800 = state_18730__$1;
-                                          statearr_18747_18800[2] = inst_18719;
-                                          statearr_18747_18800[1] = 11;
+                                          var statearr_22646_22699 = state_22629__$1;
+                                          statearr_22646_22699[2] = inst_22618;
+                                          statearr_22646_22699[1] = 11;
                                           return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                                         } else {
-                                          if (state_val_18731 === 10) {
-                                            var inst_18721 = cljs.core.println.call(null, "Got unknown project :(");
-                                            var state_18730__$1 = state_18730;
-                                            var statearr_18748_18801 = state_18730__$1;
-                                            statearr_18748_18801[2] = inst_18721;
-                                            statearr_18748_18801[1] = 11;
+                                          if (state_val_22630 === 10) {
+                                            var inst_22620 = cljs.core.println.call(null, "Got unknown project :(");
+                                            var state_22629__$1 = state_22629;
+                                            var statearr_22647_22700 = state_22629__$1;
+                                            statearr_22647_22700[2] = inst_22620;
+                                            statearr_22647_22700[1] = 11;
                                             return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                                           } else {
-                                            if (state_val_18731 === 8) {
-                                              var inst_18697 = state_18730[10];
-                                              var inst_18698 = state_18730[9];
-                                              var inst_18695 = state_18730[2];
-                                              var inst_18696 = cljs.core.get.call(null, inst_18695, new cljs.core.Keyword(null, "edit", "edit", -1641834166));
-                                              var inst_18697__$1 = cljs.core.get.call(null, inst_18695, new cljs.core.Keyword(null, "ticket", "ticket", 1810559700));
-                                              var inst_18698__$1 = cljs.core.get.call(null, inst_18695, new cljs.core.Keyword(null, "project", "project", 1124394579));
-                                              var inst_18699 = cljs.core.prn.call(null, "asdfasdf", inst_18698__$1, inst_18697__$1);
-                                              var inst_18700 = cljs.core.deref.call(null, self__.state);
-                                              var inst_18701 = (new cljs.core.Keyword(null, "projects", "projects", -364845983)).cljs$core$IFn$_invoke$arity$1(inst_18700);
-                                              var inst_18702 = cljs.core.contains_QMARK_.call(null, inst_18701, inst_18698__$1);
-                                              var state_18730__$1 = function() {
-                                                var statearr_18749 = state_18730;
-                                                statearr_18749[10] = inst_18697__$1;
-                                                statearr_18749[11] = inst_18696;
-                                                statearr_18749[9] = inst_18698__$1;
-                                                statearr_18749[17] = inst_18699;
-                                                return statearr_18749;
+                                            if (state_val_22630 === 8) {
+                                              var inst_22597 = state_22629[9];
+                                              var inst_22596 = state_22629[11];
+                                              var inst_22594 = state_22629[2];
+                                              var inst_22595 = cljs.core.get.call(null, inst_22594, new cljs.core.Keyword(null, "edit", "edit", -1641834166));
+                                              var inst_22596__$1 = cljs.core.get.call(null, inst_22594, new cljs.core.Keyword(null, "ticket", "ticket", 1810559700));
+                                              var inst_22597__$1 = cljs.core.get.call(null, inst_22594, new cljs.core.Keyword(null, "project", "project", 1124394579));
+                                              var inst_22598 = cljs.core.prn.call(null, "asdfasdf", inst_22597__$1, inst_22596__$1);
+                                              var inst_22599 = cljs.core.deref.call(null, self__.state);
+                                              var inst_22600 = (new cljs.core.Keyword(null, "projects", "projects", -364845983)).cljs$core$IFn$_invoke$arity$1(inst_22599);
+                                              var inst_22601 = cljs.core.contains_QMARK_.call(null, inst_22600, inst_22597__$1);
+                                              var state_22629__$1 = function() {
+                                                var statearr_22648 = state_22629;
+                                                statearr_22648[17] = inst_22598;
+                                                statearr_22648[9] = inst_22597__$1;
+                                                statearr_22648[10] = inst_22595;
+                                                statearr_22648[11] = inst_22596__$1;
+                                                return statearr_22648;
                                               }();
-                                              if (inst_18702) {
-                                                var statearr_18750_18802 = state_18730__$1;
-                                                statearr_18750_18802[1] = 9;
+                                              if (inst_22601) {
+                                                var statearr_22649_22701 = state_22629__$1;
+                                                statearr_22649_22701[1] = 9;
                                               } else {
-                                                var statearr_18751_18803 = state_18730__$1;
-                                                statearr_18751_18803[1] = 10;
+                                                var statearr_22650_22702 = state_22629__$1;
+                                                statearr_22650_22702[1] = 10;
                                               }
                                               return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                                             } else {
@@ -56977,22 +56977,22 @@ parenticket.core.parenticket = function parenticket__$1(state, owner) {
                   }
                 }
               };
-            }(c__8455__auto___18789, ___$1);
-            return function(switch__8440__auto__, c__8455__auto___18789, ___$1) {
+            }(c__8455__auto___22688, ___$1);
+            return function(switch__8440__auto__, c__8455__auto___22688, ___$1) {
               return function() {
                 var state_machine__8441__auto__ = null;
                 var state_machine__8441__auto____0 = function() {
-                  var statearr_18755 = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
-                  statearr_18755[0] = state_machine__8441__auto__;
-                  statearr_18755[1] = 1;
-                  return statearr_18755;
+                  var statearr_22654 = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+                  statearr_22654[0] = state_machine__8441__auto__;
+                  statearr_22654[1] = 1;
+                  return statearr_22654;
                 };
-                var state_machine__8441__auto____1 = function(state_18730) {
+                var state_machine__8441__auto____1 = function(state_22629) {
                   while (true) {
                     var ret_value__8442__auto__ = function() {
                       try {
                         while (true) {
-                          var result__8443__auto__ = switch__8440__auto__.call(null, state_18730);
+                          var result__8443__auto__ = switch__8440__auto__.call(null, state_22629);
                           if (cljs.core.keyword_identical_QMARK_.call(null, result__8443__auto__, new cljs.core.Keyword(null, "recur", "recur", -437573268))) {
                             continue;
                           } else {
@@ -57000,16 +57000,16 @@ parenticket.core.parenticket = function parenticket__$1(state, owner) {
                           }
                           break;
                         }
-                      } catch (e18756) {
-                        if (e18756 instanceof Object) {
-                          var ex__8444__auto__ = e18756;
-                          var statearr_18757_18804 = state_18730;
-                          statearr_18757_18804[5] = ex__8444__auto__;
-                          cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_18730);
+                      } catch (e22655) {
+                        if (e22655 instanceof Object) {
+                          var ex__8444__auto__ = e22655;
+                          var statearr_22656_22703 = state_22629;
+                          statearr_22656_22703[5] = ex__8444__auto__;
+                          cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_22629);
                           return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                         } else {
                           if (new cljs.core.Keyword(null, "else", "else", -1508377146)) {
-                            throw e18756;
+                            throw e22655;
                           } else {
                             return null;
                           }
@@ -57017,8 +57017,8 @@ parenticket.core.parenticket = function parenticket__$1(state, owner) {
                       }
                     }();
                     if (cljs.core.keyword_identical_QMARK_.call(null, ret_value__8442__auto__, new cljs.core.Keyword(null, "recur", "recur", -437573268))) {
-                      var G__18805 = state_18730;
-                      state_18730 = G__18805;
+                      var G__22704 = state_22629;
+                      state_22629 = G__22704;
                       continue;
                     } else {
                       return ret_value__8442__auto__;
@@ -57026,12 +57026,12 @@ parenticket.core.parenticket = function parenticket__$1(state, owner) {
                     break;
                   }
                 };
-                state_machine__8441__auto__ = function(state_18730) {
+                state_machine__8441__auto__ = function(state_22629) {
                   switch(arguments.length) {
                     case 0:
                       return state_machine__8441__auto____0.call(this);
                     case 1:
-                      return state_machine__8441__auto____1.call(this, state_18730);
+                      return state_machine__8441__auto____1.call(this, state_22629);
                   }
                   throw new Error("Invalid arity: " + arguments.length);
                 };
@@ -57039,83 +57039,83 @@ parenticket.core.parenticket = function parenticket__$1(state, owner) {
                 state_machine__8441__auto__.cljs$core$IFn$_invoke$arity$1 = state_machine__8441__auto____1;
                 return state_machine__8441__auto__;
               }();
-            }(switch__8440__auto__, c__8455__auto___18789, ___$1);
+            }(switch__8440__auto__, c__8455__auto___22688, ___$1);
           }();
           var state__8457__auto__ = function() {
-            var statearr_18758 = f__8456__auto__.call(null);
-            statearr_18758[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__8455__auto___18789;
-            return statearr_18758;
+            var statearr_22657 = f__8456__auto__.call(null);
+            statearr_22657[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__8455__auto___22688;
+            return statearr_22657;
           }();
           return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, state__8457__auto__);
         };
-      }(c__8455__auto___18789, ___$1));
+      }(c__8455__auto___22688, ___$1));
       var c__8455__auto__ = cljs.core.async.chan.call(null, 1);
       cljs.core.async.impl.dispatch.run.call(null, function(c__8455__auto__, ___$1) {
         return function() {
           var f__8456__auto__ = function() {
             var switch__8440__auto__ = function(c__8455__auto__, ___$1) {
-              return function(state_18772) {
-                var state_val_18773 = state_18772[1];
-                if (state_val_18773 === 7) {
-                  var inst_18768 = state_18772[2];
-                  var state_18772__$1 = state_18772;
-                  var statearr_18774_18806 = state_18772__$1;
-                  statearr_18774_18806[2] = inst_18768;
-                  statearr_18774_18806[1] = 3;
+              return function(state_22671) {
+                var state_val_22672 = state_22671[1];
+                if (state_val_22672 === 7) {
+                  var inst_22667 = state_22671[2];
+                  var state_22671__$1 = state_22671;
+                  var statearr_22673_22705 = state_22671__$1;
+                  statearr_22673_22705[2] = inst_22667;
+                  statearr_22673_22705[1] = 3;
                   return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                 } else {
-                  if (state_val_18773 === 6) {
-                    var state_18772__$1 = state_18772;
-                    var statearr_18775_18807 = state_18772__$1;
-                    statearr_18775_18807[2] = null;
-                    statearr_18775_18807[1] = 7;
+                  if (state_val_22672 === 6) {
+                    var state_22671__$1 = state_22671;
+                    var statearr_22674_22706 = state_22671__$1;
+                    statearr_22674_22706[2] = null;
+                    statearr_22674_22706[1] = 7;
                     return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                   } else {
-                    if (state_val_18773 === 5) {
-                      var inst_18762 = state_18772[7];
-                      var inst_18764 = om.core.set_state_BANG_.call(null, self__.owner, new cljs.core.Keyword(null, "ticket-filter", "ticket-filter", -1539714774), inst_18762);
-                      var state_18772__$1 = function() {
-                        var statearr_18776 = state_18772;
-                        statearr_18776[8] = inst_18764;
-                        return statearr_18776;
+                    if (state_val_22672 === 5) {
+                      var inst_22661 = state_22671[7];
+                      var inst_22663 = om.core.set_state_BANG_.call(null, self__.owner, new cljs.core.Keyword(null, "ticket-filter", "ticket-filter", -1539714774), inst_22661);
+                      var state_22671__$1 = function() {
+                        var statearr_22675 = state_22671;
+                        statearr_22675[8] = inst_22663;
+                        return statearr_22675;
                       }();
-                      var statearr_18777_18808 = state_18772__$1;
-                      statearr_18777_18808[2] = null;
-                      statearr_18777_18808[1] = 2;
+                      var statearr_22676_22707 = state_22671__$1;
+                      statearr_22676_22707[2] = null;
+                      statearr_22676_22707[1] = 2;
                       return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                     } else {
-                      if (state_val_18773 === 4) {
-                        var inst_18762 = state_18772[7];
-                        var inst_18762__$1 = state_18772[2];
-                        var state_18772__$1 = function() {
-                          var statearr_18778 = state_18772;
-                          statearr_18778[7] = inst_18762__$1;
-                          return statearr_18778;
+                      if (state_val_22672 === 4) {
+                        var inst_22661 = state_22671[7];
+                        var inst_22661__$1 = state_22671[2];
+                        var state_22671__$1 = function() {
+                          var statearr_22677 = state_22671;
+                          statearr_22677[7] = inst_22661__$1;
+                          return statearr_22677;
                         }();
-                        if (cljs.core.truth_(inst_18762__$1)) {
-                          var statearr_18779_18809 = state_18772__$1;
-                          statearr_18779_18809[1] = 5;
+                        if (cljs.core.truth_(inst_22661__$1)) {
+                          var statearr_22678_22708 = state_22671__$1;
+                          statearr_22678_22708[1] = 5;
                         } else {
-                          var statearr_18780_18810 = state_18772__$1;
-                          statearr_18780_18810[1] = 6;
+                          var statearr_22679_22709 = state_22671__$1;
+                          statearr_22679_22709[1] = 6;
                         }
                         return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                       } else {
-                        if (state_val_18773 === 3) {
-                          var inst_18770 = state_18772[2];
-                          var state_18772__$1 = state_18772;
-                          return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_18772__$1, inst_18770);
+                        if (state_val_22672 === 3) {
+                          var inst_22669 = state_22671[2];
+                          var state_22671__$1 = state_22671;
+                          return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_22671__$1, inst_22669);
                         } else {
-                          if (state_val_18773 === 2) {
-                            var inst_18760 = om.core.get_state.call(null, self__.owner, new cljs.core.Keyword(null, "filter-chan", "filter-chan", -319950203));
-                            var state_18772__$1 = state_18772;
-                            return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_18772__$1, 4, inst_18760);
+                          if (state_val_22672 === 2) {
+                            var inst_22659 = om.core.get_state.call(null, self__.owner, new cljs.core.Keyword(null, "filter-chan", "filter-chan", -319950203));
+                            var state_22671__$1 = state_22671;
+                            return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_22671__$1, 4, inst_22659);
                           } else {
-                            if (state_val_18773 === 1) {
-                              var state_18772__$1 = state_18772;
-                              var statearr_18781_18811 = state_18772__$1;
-                              statearr_18781_18811[2] = null;
-                              statearr_18781_18811[1] = 2;
+                            if (state_val_22672 === 1) {
+                              var state_22671__$1 = state_22671;
+                              var statearr_22680_22710 = state_22671__$1;
+                              statearr_22680_22710[2] = null;
+                              statearr_22680_22710[1] = 2;
                               return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                             } else {
                               return null;
@@ -57132,17 +57132,17 @@ parenticket.core.parenticket = function parenticket__$1(state, owner) {
               return function() {
                 var state_machine__8441__auto__ = null;
                 var state_machine__8441__auto____0 = function() {
-                  var statearr_18785 = [null, null, null, null, null, null, null, null, null];
-                  statearr_18785[0] = state_machine__8441__auto__;
-                  statearr_18785[1] = 1;
-                  return statearr_18785;
+                  var statearr_22684 = [null, null, null, null, null, null, null, null, null];
+                  statearr_22684[0] = state_machine__8441__auto__;
+                  statearr_22684[1] = 1;
+                  return statearr_22684;
                 };
-                var state_machine__8441__auto____1 = function(state_18772) {
+                var state_machine__8441__auto____1 = function(state_22671) {
                   while (true) {
                     var ret_value__8442__auto__ = function() {
                       try {
                         while (true) {
-                          var result__8443__auto__ = switch__8440__auto__.call(null, state_18772);
+                          var result__8443__auto__ = switch__8440__auto__.call(null, state_22671);
                           if (cljs.core.keyword_identical_QMARK_.call(null, result__8443__auto__, new cljs.core.Keyword(null, "recur", "recur", -437573268))) {
                             continue;
                           } else {
@@ -57150,16 +57150,16 @@ parenticket.core.parenticket = function parenticket__$1(state, owner) {
                           }
                           break;
                         }
-                      } catch (e18786) {
-                        if (e18786 instanceof Object) {
-                          var ex__8444__auto__ = e18786;
-                          var statearr_18787_18812 = state_18772;
-                          statearr_18787_18812[5] = ex__8444__auto__;
-                          cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_18772);
+                      } catch (e22685) {
+                        if (e22685 instanceof Object) {
+                          var ex__8444__auto__ = e22685;
+                          var statearr_22686_22711 = state_22671;
+                          statearr_22686_22711[5] = ex__8444__auto__;
+                          cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_22671);
                           return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                         } else {
                           if (new cljs.core.Keyword(null, "else", "else", -1508377146)) {
-                            throw e18786;
+                            throw e22685;
                           } else {
                             return null;
                           }
@@ -57167,8 +57167,8 @@ parenticket.core.parenticket = function parenticket__$1(state, owner) {
                       }
                     }();
                     if (cljs.core.keyword_identical_QMARK_.call(null, ret_value__8442__auto__, new cljs.core.Keyword(null, "recur", "recur", -437573268))) {
-                      var G__18813 = state_18772;
-                      state_18772 = G__18813;
+                      var G__22712 = state_22671;
+                      state_22671 = G__22712;
                       continue;
                     } else {
                       return ret_value__8442__auto__;
@@ -57176,12 +57176,12 @@ parenticket.core.parenticket = function parenticket__$1(state, owner) {
                     break;
                   }
                 };
-                state_machine__8441__auto__ = function(state_18772) {
+                state_machine__8441__auto__ = function(state_22671) {
                   switch(arguments.length) {
                     case 0:
                       return state_machine__8441__auto____0.call(this);
                     case 1:
-                      return state_machine__8441__auto____1.call(this, state_18772);
+                      return state_machine__8441__auto____1.call(this, state_22671);
                   }
                   throw new Error("Invalid arity: " + arguments.length);
                 };
@@ -57192,35 +57192,35 @@ parenticket.core.parenticket = function parenticket__$1(state, owner) {
             }(switch__8440__auto__, c__8455__auto__, ___$1);
           }();
           var state__8457__auto__ = function() {
-            var statearr_18788 = f__8456__auto__.call(null);
-            statearr_18788[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__8455__auto__;
-            return statearr_18788;
+            var statearr_22687 = f__8456__auto__.call(null);
+            statearr_22687[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__8455__auto__;
+            return statearr_22687;
           }();
           return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, state__8457__auto__);
         };
       }(c__8455__auto__, ___$1));
       return c__8455__auto__;
     };
-    parenticket.core.t18665.prototype.om$core$IInitState$ = true;
-    parenticket.core.t18665.prototype.om$core$IInitState$init_state$arity$1 = function(_) {
+    parenticket.core.t22564.prototype.om$core$IInitState$ = true;
+    parenticket.core.t22564.prototype.om$core$IInitState$init_state$arity$1 = function(_) {
       var self__ = this;
       var ___$1 = this;
       return new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, "current-ticket", "current-ticket", -1789027729), null, new cljs.core.Keyword(null, "edit?", "edit?", -842131310), false, new cljs.core.Keyword(null, "ticket-filter", "ticket-filter", -1539714774), "", new cljs.core.Keyword(null, "filter-chan", "filter-chan", -319950203), cljs.core.async.chan.call(null, cljs.core.async.dropping_buffer.call(null, 1))], null);
     };
-    parenticket.core.t18665.prototype.cljs$core$IMeta$_meta$arity$1 = function(_18667) {
+    parenticket.core.t22564.prototype.cljs$core$IMeta$_meta$arity$1 = function(_22566) {
       var self__ = this;
-      var _18667__$1 = this;
-      return self__.meta18666;
+      var _22566__$1 = this;
+      return self__.meta22565;
     };
-    parenticket.core.t18665.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(_18667, meta18666__$1) {
+    parenticket.core.t22564.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(_22566, meta22565__$1) {
       var self__ = this;
-      var _18667__$1 = this;
-      return new parenticket.core.t18665(self__.owner, self__.state, self__.parenticket, meta18666__$1);
+      var _22566__$1 = this;
+      return new parenticket.core.t22564(self__.owner, self__.state, self__.parenticket, meta22565__$1);
     };
-    parenticket.core.__GT_t18665 = function __GT_t18665(owner__$1, state__$1, parenticket__$2, meta18666) {
-      return new parenticket.core.t18665(owner__$1, state__$1, parenticket__$2, meta18666);
+    parenticket.core.__GT_t22564 = function __GT_t22564(owner__$1, state__$1, parenticket__$2, meta22565) {
+      return new parenticket.core.t22564(owner__$1, state__$1, parenticket__$2, meta22565);
     };
   }
-  return new parenticket.core.t18665(owner, state, parenticket__$1, null);
+  return new parenticket.core.t22564(owner, state, parenticket__$1, null);
 };
 om.core.root.call(null, parenticket.core.parenticket, parenticket.core.app_state, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "target", "target", 253001721), document.getElementById("main")], null));

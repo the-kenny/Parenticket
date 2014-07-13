@@ -75,7 +75,7 @@
     (render [_]
       (html
        [:ul.tickets
-        (om/build-all ticket tickets)]))))
+        (om/build-all ticket (rseq (vec (sort-by (comp js/parseInt :priority) tickets))))]))))
 
 (defn handle-new-project! [state owner]
   (when-let [name (js/prompt "Project Name?")]
