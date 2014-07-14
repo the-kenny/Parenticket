@@ -17,7 +17,7 @@ class TicketsController < ApplicationController
         @ticket = Ticket.new(ticket_params)
         @ticket.project_id = params[:project_id]
         @ticket.status ||= 0
-        @ticket.tags = (params[:tags] || []).map { |tag_name| Tag.find_or_create_by(:name => tag_name) }
+        @ticket.tags = convert_tag_names_array_to_tags(params[:tags])
         if @ticket.save
           render json: @ticket
         else
@@ -42,7 +42,7 @@ class TicketsController < ApplicationController
     respond_to do |format|
       format.json do
         @ticket = Ticket.find(params[:id])
-        @ticket.tags = (params[:tags] || []).map { |tag_name| Tag.find_or_create_by(:name => tag_name) }
+        @ticket.tags = convert_tag_names_array_to_tags(params[:tags])
         if @ticket.update(ticket_params)
           puts @ticket.inspect
           render json: @ticket
@@ -60,6 +60,10 @@ class TicketsController < ApplicationController
   end
 
   private
+
+  def convert_tag_names_array_to_tags(tag_names = [])
+    tag_names.map { |tag_name| Tag.find_or_create_by(name: tag_name) }
+  end
 
   def ticket_params
     params.require(:ticket).permit(:name, :description, :priority, :deadline, :status)
