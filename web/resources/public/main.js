@@ -14031,8 +14031,8 @@ function Tr(a, b, c) {
     this.zg = g;
     this.v = 0;
     this.l = 393216;
-  }, Kr.Sa = !0, Kr.Ra = "parenticket.core/t18277", Kr.ab = function(a, b) {
-    return me(b, "parenticket.core/t18277");
+  }, Kr.Sa = !0, Kr.Ra = "parenticket.core/t19984", Kr.ab = function(a, b) {
+    return me(b, "parenticket.core/t19984");
   }, Kr.prototype.Td = !0, Kr.prototype.Xc = function() {
     var a = this;
     return React.DOM.li({className:"ticket"}, function() {
@@ -14070,8 +14070,8 @@ var Vr = function Ur(b, c, d) {
     this.Ag = l;
     this.v = 0;
     this.l = 393216;
-  }, Lr.Sa = !0, Lr.Ra = "parenticket.core/t18293", Lr.ab = function(b, c) {
-    return me(c, "parenticket.core/t18293");
+  }, Lr.Sa = !0, Lr.Ra = "parenticket.core/t20000", Lr.ab = function(b, c) {
+    return me(c, "parenticket.core/t20000");
   }, Lr.prototype.Td = !0, Lr.prototype.Xc = function() {
     var b = Fr.c(Tr, Sf(kh(If.c(vg.c(parseInt, Fk), this.Qa))));
     return vf(b) ? React.DOM.ul(jp(cp.f(N([new u(null, 1, [Lk, new W(null, 1, 5, Y, ["tickets"], null)], null), b], 0))), null) : React.DOM.ul({className:"tickets"}, fp(b));
@@ -14172,8 +14172,8 @@ var Yr = function Xr(b, c, d) {
     this.Bg = l;
     this.v = 0;
     this.l = 393216;
-  }, Mr.Sa = !0, Mr.Ra = "parenticket.core/t18379", Mr.ab = function(b, c) {
-    return me(c, "parenticket.core/t18379");
+  }, Mr.Sa = !0, Mr.Ra = "parenticket.core/t20086", Mr.ab = function(b, c) {
+    return me(c, "parenticket.core/t20086");
   }, Mr.prototype.Ud = !0, Mr.prototype.Yc = function(b, c) {
     var d = this, k = Bf(c) ? U.c(Zh, c) : c, l = T.c(k, tk), m = this;
     return React.DOM.div({className:"pane project"}, React.DOM.h1(null, "Parenticket"), function() {
@@ -14246,8 +14246,8 @@ var Yr = function Xr(b, c, d) {
     this.Cg = l;
     this.v = 0;
     this.l = 393216;
-  }, Nr.Sa = !0, Nr.Ra = "parenticket.core/t18410", Nr.ab = function(b, c) {
-    return me(c, "parenticket.core/t18410");
+  }, Nr.Sa = !0, Nr.Ra = "parenticket.core/t20117", Nr.ab = function(b, c) {
+    return me(c, "parenticket.core/t20117");
   }, Nr.prototype.Td = !0, Nr.prototype.Xc = function() {
     var b = this;
     return React.DOM.div({className:"dialog ticket"}, React.DOM.div({className:"close", onClick:function() {
@@ -14373,8 +14373,8 @@ var ds = function cs(b, c, d) {
     this.Dg = l;
     this.v = 0;
     this.l = 393216;
-  }, Or.Sa = !0, Or.Ra = "parenticket.core/t18525", Or.ab = function(b, c) {
-    return me(c, "parenticket.core/t18525");
+  }, Or.Sa = !0, Or.Ra = "parenticket.core/t20246", Or.ab = function(b, c) {
+    return me(c, "parenticket.core/t20246");
   }, Or.prototype.Ud = !0, Or.prototype.Yc = function(b, c) {
     var d = this, k = Bf(c) ? U.c(Zh, c) : c, l = T.c(k, Hk), m = T.c(k, ol), n = T.c(k, Fk), p = T.c(k, Fj), q = T.c(k, zj), s = T.c(k, Xj);
     return React.DOM.div({className:"dialog ticket"}, React.DOM.div({className:"close", onClick:function() {
@@ -14387,9 +14387,9 @@ var ds = function cs(b, c, d) {
         as(kl.d(d.fa), Kk.d(d.fa), d.Q);
         return!1;
       };
-    }(this, c, k, l, m, n, p, q, s)}, React.DOM.h3(null, "Ticket"), React.DOM.label({className:"name"}, "Name", hp.d ? hp.d({className:"name", value:s, onChange:wg.e(bs, d.Q, Xj)}) : hp.call(null, {className:"name", value:s, onChange:wg.e(bs, d.Q, Xj)})), React.DOM.label({className:"description"}, "Description", hp.d ? hp.d({className:"description", value:q, onChange:wg.e(bs, d.Q, zj)}) : hp.call(null, {className:"description", value:q, onChange:wg.e(bs, d.Q, zj)})), React.DOM.label({className:"tags"}, 
-    "Tags", hp.d ? hp.d({className:"tags", value:"string" === typeof p ? p : uo.c(" ", p), onChange:wg.e(bs, d.Q, Fj)}) : hp.call(null, {className:"tags", value:"string" === typeof p ? p : uo.c(" ", p), onChange:wg.e(bs, d.Q, Fj)})), React.DOM.label({className:"deadline"}, "Deadline", hp.d ? hp.d({className:"deadline", value:m, disabled:!0}) : hp.call(null, {className:"deadline", value:m, disabled:!0})), React.DOM.label({className:"priority"}, "Priority", hp.d ? hp.d({className:"priority", value:n, 
-    onChange:wg.e(bs, d.Q, Fk)}) : hp.call(null, {className:"priority", value:n, onChange:wg.e(bs, d.Q, Fk)})), React.DOM.label({className:"status"}, "Status", React.DOM.select({className:"status", value:l, onChange:wg.e(bs, d.Q, Hk)}, React.DOM.option({value:0}, "Todo"), React.DOM.option({value:1}, "Doing"), React.DOM.option({value:2}, "Done"))), React.DOM.button({className:"cancel", type:"button", onClick:function() {
+    }(this, c, k, l, m, n, p, q, s)}, React.DOM.h3(null, "Ticket"), React.DOM.label({className:"name"}, "Name"), hp.d ? hp.d({className:"name", value:s, onChange:wg.e(bs, d.Q, Xj)}) : hp.call(null, {className:"name", value:s, onChange:wg.e(bs, d.Q, Xj)}), React.DOM.label({className:"description"}, "Description"), hp.d ? hp.d({className:"description", value:q, onChange:wg.e(bs, d.Q, zj)}) : hp.call(null, {className:"description", value:q, onChange:wg.e(bs, d.Q, zj)}), React.DOM.label({className:"tags"}, 
+    "Tags"), hp.d ? hp.d({className:"tags", value:"string" === typeof p ? p : uo.c(" ", p), onChange:wg.e(bs, d.Q, Fj)}) : hp.call(null, {className:"tags", value:"string" === typeof p ? p : uo.c(" ", p), onChange:wg.e(bs, d.Q, Fj)}), React.DOM.label({className:"deadline"}, "Deadline"), hp.d ? hp.d({className:"deadline", value:m, disabled:!0}) : hp.call(null, {className:"deadline", value:m, disabled:!0}), React.DOM.label({className:"priority"}, "Priority"), hp.d ? hp.d({className:"priority", value:n, 
+    onChange:wg.e(bs, d.Q, Fk)}) : hp.call(null, {className:"priority", value:n, onChange:wg.e(bs, d.Q, Fk)}), React.DOM.label({className:"status"}, "Status"), React.DOM.select({className:"status", value:l, onChange:wg.e(bs, d.Q, Hk)}, React.DOM.option({value:0}, "Todo"), React.DOM.option({value:1}, "Doing"), React.DOM.option({value:2}, "Done")), React.DOM.br(null), React.DOM.button({className:"cancel", type:"button", onClick:function() {
       return function() {
         nf(sk.d(d.Da)) && sk.d(d.Da).call(null);
         return!1;
@@ -14482,8 +14482,8 @@ function es(a, b) {
     this.Eg = g;
     this.v = 0;
     this.l = 393216;
-  }, Pr.Sa = !0, Pr.Ra = "parenticket.core/t18665", Pr.ab = function(b, c) {
-    return me(c, "parenticket.core/t18665");
+  }, Pr.Sa = !0, Pr.Ra = "parenticket.core/t20400", Pr.ab = function(b, c) {
+    return me(c, "parenticket.core/t20400");
   }, Pr.prototype.Ud = !0, Pr.prototype.Yc = function(b, c) {
     var f = this, g = Bf(c) ? U.c(Zh, c) : c, k = T.c(g, Zj), l = T.c(g, Ck), m = T.c(g, wk), n = this, p = pl.d(f.state), q = ej(Hk, Ig(wg.c(es, k), Ig(function(b) {
       return function(c) {
@@ -14585,10 +14585,10 @@ function es(a, b) {
                 return e = Ho(), ko(c, 4, e);
               }
               if (11 === e) {
-                var e = c[11], f = c[2], g = Jr.e(b.Q, wk, c[10]), e = Jr.e(b.Q, Ck, e);
-                c[12] = f;
-                c[13] = g;
-                c[14] = e;
+                var e = c[10], f = c[2], g = Jr.e(b.Q, wk, c[11]), e = Jr.e(b.Q, Ck, e);
+                c[12] = g;
+                c[13] = e;
+                c[14] = f;
                 c[2] = null;
                 c[1] = 2;
                 return Z;
@@ -14607,10 +14607,10 @@ function es(a, b) {
               }
               if (8 === e) {
                 var g = c[2], e = T.c(g, ak), f = T.c(g, Mk), g = T.c(g, Gk), k = Ii.f(N(["asdfasdf", g, f], 0)), l = D(b.state), l = Ej.d(l), l = Df(l, g);
-                c[10] = f;
-                c[11] = e;
                 c[9] = g;
                 c[17] = k;
+                c[10] = e;
+                c[11] = f;
                 c[1] = l ? 9 : 10;
                 return Z;
               }

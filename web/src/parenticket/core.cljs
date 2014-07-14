@@ -173,28 +173,28 @@
                              (handle-edit! (:project_id ticket) (:id ticket) owner)
                              false)}
          [:h3 "Ticket"]
-         [:label.name "Name"
-          [:input.name {:value name
-                        :on-change (partial change owner :name)}]]
-         [:label.description "Description"
-          [:input.description {:value description
-                               :on-change (partial change owner :description)}]]
-         [:label.tags "Tags"
-          [:input.tags {:value (if (string? tags) tags (s/join " " tags))
-                        :on-change (partial change owner :tags)}]]
-         [:label.deadline "Deadline"
-          [:input.deadline {:value deadline
-                            :disabled true}]]
-         [:label.priority "Priority"
-          [:input.priority {:value priority
-                            :on-change (partial change owner :priority)}]]
-         [:label.status "Status"
-          [:select.status {:value status
-                           :on-change (partial change owner :status)}
-           [:option {:value 0} "Todo"]
-           [:option {:value 1} "Doing"]
-           [:option {:value 2} "Done"]]]
-
+         [:label.name "Name"]
+         [:input.name {:value name
+                       :on-change (partial change owner :name)}]
+         [:label.description "Description"]
+         [:input.description {:value description
+                              :on-change (partial change owner :description)}]
+         [:label.tags "Tags"]
+         [:input.tags {:value (if (string? tags) tags (s/join " " tags))
+                       :on-change (partial change owner :tags)}]
+         [:label.deadline "Deadline"]
+         [:input.deadline {:value deadline
+                           :disabled true}]
+         [:label.priority "Priority"]
+         [:input.priority {:value priority
+                           :on-change (partial change owner :priority)}]
+         [:label.status "Status"]
+         [:select.status {:value status
+                          :on-change (partial change owner :status)}
+          [:option {:value 0} "Todo"]
+          [:option {:value 1} "Doing"]
+          [:option {:value 2} "Done"]]
+         [:br]
          [:button.cancel {:type "button"
                           :on-click (fn [_]
                                       (when (fn? (:close opts)) ((:close opts)))
