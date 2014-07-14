@@ -61,7 +61,8 @@ class TicketsController < ApplicationController
 
   private
 
-  def convert_tag_names_array_to_tags(tag_names = [])
+  def convert_tag_names_array_to_tags(tag_names)
+    tag_names ||= []
     tag_names.delete_if { |tag_name| tag_name.blank? }
     tag_names.map { |tag_name| Tag.find_or_create_by(name: tag_name) }
   end
